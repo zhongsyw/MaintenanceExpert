@@ -7,6 +7,7 @@
 //
 
 #import "ZSMineViewController.h"
+#import "ZSLoginViewController.h"
 
 @interface ZSMineViewController ()
 
@@ -17,6 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor cyanColor];
+    
+    [self loginbtn];
+    
+}
+
+- (void)loginbtn {
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 200, 50, 50)];
+    btn.backgroundColor = [UIColor blueColor];
+    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchDown];
+    
+    [self.view addSubview:btn];
+}
+
+- (void)click {
+    
+    ZSLoginViewController *zslogin = [[ZSLoginViewController alloc]init];
+    [self.navigationController pushViewController:zslogin animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
