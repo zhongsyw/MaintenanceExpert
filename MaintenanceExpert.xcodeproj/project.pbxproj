@@ -31,6 +31,8 @@
 		5768C2541DB5BD4C0069B421 /* ZSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5768C2531DB5BD4C0069B421 /* ZSTabBar.m */; };
 		5787E8961DB866E40062249F /* ZSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5787E8951DB866E40062249F /* ZSLoginViewController.m */; };
 		5787E89F1DB8A9250062249F /* UIbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5787E89E1DB8A9250062249F /* UIbutton.m */; };
+		57D7E1E41DB9AACA005E69E2 /* ZSChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D7E1E31DB9AACA005E69E2 /* ZSChangePasswordVC.m */; };
+		57D7E1FC1DB9E378005E69E2 /* ZSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D7E1FB1DB9E378005E69E2 /* ZSMessageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,10 @@
 		5787E8951DB866E40062249F /* ZSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSLoginViewController.m; sourceTree = "<group>"; };
 		5787E89D1DB8A9250062249F /* UIbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIbutton.h; path = MaintenanceExpert/Main/Controller/UIbutton.h; sourceTree = SOURCE_ROOT; };
 		5787E89E1DB8A9250062249F /* UIbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIbutton.m; path = MaintenanceExpert/Main/Controller/UIbutton.m; sourceTree = SOURCE_ROOT; };
+		57D7E1E21DB9AACA005E69E2 /* ZSChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSChangePasswordVC.h; sourceTree = "<group>"; };
+		57D7E1E31DB9AACA005E69E2 /* ZSChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSChangePasswordVC.m; sourceTree = "<group>"; };
+		57D7E1FA1DB9E378005E69E2 /* ZSMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSMessageView.h; sourceTree = "<group>"; };
+		57D7E1FB1DB9E378005E69E2 /* ZSMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSMessageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +283,8 @@
 				5768C2381DB5B9DE0069B421 /* ZSNavigationController.m */,
 				5787E8941DB866E40062249F /* ZSLoginViewController.h */,
 				5787E8951DB866E40062249F /* ZSLoginViewController.m */,
+				57D7E1E21DB9AACA005E69E2 /* ZSChangePasswordVC.h */,
+				57D7E1E31DB9AACA005E69E2 /* ZSChangePasswordVC.m */,
 				57599A631DB9A520007BC223 /* ZSRegisterViewController.h */,
 				57599A641DB9A520007BC223 /* ZSRegisterViewController.m */,
 				57599A611DB9A520007BC223 /* ZSRegisterCustomerVC.h */,
@@ -307,6 +315,8 @@
 			children = (
 				5768C2521DB5BD4C0069B421 /* ZSTabBar.h */,
 				5768C2531DB5BD4C0069B421 /* ZSTabBar.m */,
+				57D7E1FA1DB9E378005E69E2 /* ZSMessageView.h */,
+				57D7E1FB1DB9E378005E69E2 /* ZSMessageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -622,7 +632,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5768C22C1DB5B9050069B421 /* AppDelegate.m in Sources */,
+				57D7E1FC1DB9E378005E69E2 /* ZSMessageView.m in Sources */,
 				5787E89F1DB8A9250062249F /* UIbutton.m in Sources */,
+				57D7E1E41DB9AACA005E69E2 /* ZSChangePasswordVC.m in Sources */,
 				5768C24E1DB5BC3A0069B421 /* UIView+ZSExtension.m in Sources */,
 				5768C22D1DB5B9050069B421 /* main.m in Sources */,
 				5768C23F1DB5BAFC0069B421 /* ZSOrderViewController.m in Sources */,
@@ -783,7 +795,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/koka/Desktop/MaintenanceExpert/MaintenanceExpert/Main/Controller/PrefixHeader.pch;
 				INFOPLIST_FILE = MaintenanceExpert/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zsyw.MaintenanceExpert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -797,7 +809,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/koka/Desktop/MaintenanceExpert/MaintenanceExpert/Main/Controller/PrefixHeader.pch;
 				INFOPLIST_FILE = MaintenanceExpert/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zsyw.MaintenanceExpert;
 				PRODUCT_NAME = "$(TARGET_NAME)";

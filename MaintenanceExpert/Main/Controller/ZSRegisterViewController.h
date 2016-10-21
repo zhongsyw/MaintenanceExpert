@@ -10,4 +10,10 @@
 
 @interface ZSRegisterViewController : UIViewController
 
+@property(nonatomic,strong)UITextView*  textViewType;
+@property(nonatomic,strong)UIButton*    nextStepBtn;
+@property(nonatomic,strong)UITextField* phoneTF;
+@property(nonatomic,strong)UITextField* messageTF;
+@property(nonatomic,strong)UITextField* passwordTF;
+
 @end

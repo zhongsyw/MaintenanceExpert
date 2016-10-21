@@ -9,9 +9,12 @@
 #import "ZSLoginViewController.h"
 #import "ZSNavigationController.h"
 #import "ZSRegisterViewController.h"
+#import "ZSChangePasswordVC.h"
+
 
 #import "UIView+ZSExtension.h"
 #import "UIbutton.h"
+#import "ZSMessageView.h"
 
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -19,19 +22,12 @@
 
 @implementation ZSLoginViewController
 
-{
-    UIButton *_logobtn;
-    UIButton *_otherBtn;
-    UITextField *_phone;
-    UITextField *_secret;
-    
-}
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
-    _logobtn = [[UIButton alloc]init];
+    _loginbtn = [[UIButton alloc]init];
     _otherBtn = [[UIButton alloc]init];
     _phone = [[UITextField alloc]init];
     _secret = [[UITextField alloc]init];
@@ -113,14 +109,14 @@
     [self.view addSubview:phonetextfield];
     [self.view addSubview:phonetextfield];
     
-    UIImageView *rightView1 = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth - 110, -2, 30, 25)];
-    rightView1.image = [UIImage imageNamed:@"login_phone-1"];
-    rightView1.contentMode =UIViewContentModeScaleAspectFit;
-    CGRect frame1 = rightView1.frame;
-    frame1.size = CGSizeMake(40, 40);
-    rightView1.contentMode = UIViewContentModeCenter;
-    phonetextfield.rightView = rightView1;
-    phonetextfield.rightViewMode = UITextFieldViewModeAlways;
+//    UIImageView *rightView1 = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth - 110, -2, 30, 25)];
+//    rightView1.image = [UIImage imageNamed:@"login_phone-1"];
+//    rightView1.contentMode =UIViewContentModeScaleAspectFit;
+//    CGRect frame1 = rightView1.frame;
+//    frame1.size = CGSizeMake(40, 40);
+//    rightView1.contentMode = UIViewContentModeCenter;
+//    phonetextfield.rightView = rightView1;
+//    phonetextfield.rightViewMode = UITextFieldViewModeAlways;
     _phone = phonetextfield;
 
     
@@ -138,14 +134,14 @@
     [secrettextfield addSubview:lineView1];
     [self.view addSubview:secrettextfield];
 
-    UIImageView *rightView = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth - 110, 0, 30, 30)];
-    rightView.image = [UIImage imageNamed:@"login_psw-1"];
-    CGRect frame = rightView.frame;
-    frame.size = CGSizeMake(40, 40);
-    rightView.contentMode =UIViewContentModeScaleAspectFit;
-    //rightView.contentMode = UIViewContentModeCenter;
-    secrettextfield.rightView = rightView;
-    secrettextfield.rightViewMode = UITextFieldViewModeAlways;
+//    UIImageView *rightView = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth - 110, 0, 30, 30)];
+//    rightView.image = [UIImage imageNamed:@"login_psw-1"];
+//    CGRect frame = rightView.frame;
+//    frame.size = CGSizeMake(40, 40);
+//    rightView.contentMode =UIViewContentModeScaleAspectFit;
+//    //rightView.contentMode = UIViewContentModeCenter;
+//    secrettextfield.rightView = rightView;
+//    secrettextfield.rightViewMode = UITextFieldViewModeAlways;
     _secret = secrettextfield;
 }
 
@@ -159,9 +155,9 @@
     
     button.backgroundColor = [UIColor colorWithRed:41.0 / 255.0 green:182.0 / 255.0 blue:246.0 / 255.0 alpha:1];
     button.layer.cornerRadius = 10;
-    [ button setTitle:@"登           录" forState:UIControlStateNormal];
+    [ button setTitle:@"登           陆" forState:UIControlStateNormal];
     
-    _logobtn = button;
+    _loginbtn = button;
     
     [self.view addSubview:button];
     
@@ -180,15 +176,17 @@
     /**
      其他登录方式
      */
-    UILabel *otherlogin = [[UILabel alloc]initWithFrame:CGRectMake(0, _logobtn.frame.origin.y + _logobtn.size.height + 80, KScreenWidth , 10)];
+    UILabel *otherlogin = [[UILabel alloc]initWithFrame:CGRectMake(0, _loginbtn.frame.origin.y + _loginbtn.size.height + 80, KScreenWidth , 10)];
     otherlogin.textAlignment = NSTextAlignmentCenter;
     otherlogin.text = @"其他登录方式";
     otherlogin.textColor = [UIColor colorWithRed:70.0 / 255.0 green:70.0 / 255.0 blue:70.0 / 255.0 alpha:1];
     otherlogin.font = [UIFont systemFontOfSize:14];
     
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(_logobtn.frame.origin.x, otherlogin.frame.size.height + 5, _logobtn.frame.size.width, 1)];
+    //UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(_loginbtn.frame.origin.x, otherlogin.frame.origin.y + 5, _loginbtn.frame.size.width, 1)];
+    UIView *lineView = [[UIView alloc]init];
+    lineView.sd_layout.widthIs(_loginbtn.frame.size.width).xIs(_loginbtn.frame.origin.x).yIs(otherlogin.frame.origin.y - 5).heightIs(1);
     lineView.backgroundColor = [UIColor colorWithRed:150.0 / 255.0 green:170.0 / 255.0 blue:180.0 / 255.0 alpha:1];
-    [otherlogin addSubview:lineView];
+    [self.view addSubview:lineView];
     
     [self.view addSubview:otherlogin];
     
@@ -201,26 +199,27 @@
      */
     UIbutton *btn = [[UIbutton alloc]init];
     
-    UIButton *QQ = [btn addButtonWithImage:@"share_platform_qqfriends-1" highImage:nil disableImage:nil frame:CGRectMake(_logobtn.frame.origin.x, otherlogin.frame.origin.y + 25, _logobtn.frame.size.width / 6, _logobtn.frame.size.width / 6) tag:0 action:@selector(clickQQ)];
+    UIButton *QQ = [btn addButtonWithImage:@"share_platform_qqfriends-1" highImage:nil disableImage:nil frame:CGRectMake(_loginbtn.frame.origin.x, otherlogin.frame.origin.y + 25, _loginbtn.frame.size.width / 6, _loginbtn.frame.size.width / 6) tag:0 action:@selector(clickQQ)];
     QQ.layer.cornerRadius = 10;
     
     _otherBtn = QQ;
     [self.view addSubview:QQ];
     
-    UIButton *weixin = [btn addButtonWithImage:@"share_wechat" highImage:nil disableImage:nil frame:CGRectMake(_logobtn.frame.origin.x + (_logobtn.frame.size.width * 5) / 18, otherlogin.frame.origin.y + 25, _logobtn.frame.size.width / 6, _logobtn.frame.size.width / 6) tag:1 action:@selector(clickweixin)];
+    UIButton *weixin = [btn addButtonWithImage:@"share_wechat" highImage:nil disableImage:nil frame:CGRectMake(_loginbtn.frame.origin.x + (_loginbtn.frame.size.width * 5) / 18, otherlogin.frame.origin.y + 25, _loginbtn.frame.size.width / 6, _loginbtn.frame.size.width / 6) tag:1 action:@selector(clickweixin)];
     weixin.layer.cornerRadius = 10;
     
     [self.view addSubview:weixin];
     
-    UIButton *weibo = [btn addButtonWithImage:@"share_platform_sina" highImage:nil disableImage:nil frame:CGRectMake(_logobtn.frame.origin.x + (_logobtn.frame.size.width * 5) / 9, otherlogin.frame.origin.y + 25, _logobtn.frame.size.width / 6, _logobtn.frame.size.width / 6) tag:2 action:@selector(clickweibo)];
+    UIButton *weibo = [btn addButtonWithImage:@"share_platform_sina" highImage:nil disableImage:nil frame:CGRectMake(_loginbtn.frame.origin.x + (_loginbtn.frame.size.width * 5) / 9, otherlogin.frame.origin.y + 25, _loginbtn.frame.size.width / 6, _loginbtn.frame.size.width / 6) tag:2 action:@selector(clickweibo)];
     weibo.layer.cornerRadius = 10;
     
     [self.view addSubview:weibo];
     
-    UIButton *yanzhengma = [btn addButtonWithImage:@"post_office_icon" highImage:nil disableImage:nil frame:CGRectMake(_logobtn.frame.origin.x + (_logobtn.frame.size.width * 5) / 6, otherlogin.frame.origin.y + 25, _logobtn.frame.size.width / 6, _logobtn.frame.size.width / 6) tag:3 action:@selector(clickyanzhengma)];
+    UIButton *yanzhengma = [btn addButtonWithImage:@"post_office_icon" highImage:nil disableImage:nil frame:CGRectMake(_loginbtn.frame.origin.x + (_loginbtn.frame.size.width * 5) / 6, otherlogin.frame.origin.y + 25, _loginbtn.frame.size.width / 6, _loginbtn.frame.size.width / 6) tag:3 action:@selector(clickyanzhengma)];
     yanzhengma.layer.cornerRadius = 10;
     
     [self.view addSubview:yanzhengma];
+    
     
 }
 
@@ -245,7 +244,11 @@
 
 - (void)clickyanzhengma {
     
-    NSLog(@"yanzhengma");
+    //NSLog(@"yanzhengma");
+    
+   ZSMessageView *mes = [[ZSMessageView alloc]init];
+   [self.navigationController pushViewController:mes animated:YES];
+    
 }
 
 
@@ -254,7 +257,13 @@
  */
 - (void)createRegisterAndForgetsecret {
     
-    UIButton *registerbtn = [[UIButton alloc]initWithFrame:CGRectMake(_logobtn.frame.origin.x, _otherBtn.frame.origin.y + _otherBtn.frame.size.height + 50 , 80, 20)];
+    
+    UIButton *registerbtn = [[UIButton alloc]init];
+    registerbtn.sd_layout.xIs(_loginbtn.frame.origin.x)
+                         .widthIs(70)
+                         .heightIs(20)
+                         .yIs(KScreenHeight - 40);
+    
     NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:@"注册账号"];
     NSRange titleRange = {0,[title length]};
     [title addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:titleRange];
@@ -271,7 +280,9 @@
     
     
     
-    UIButton *ForgetSecret = [[UIButton alloc]initWithFrame:CGRectMake(_logobtn.frame.size.width + registerbtn.frame.origin.x - registerbtn.frame.size.width, _otherBtn.frame.origin.y + _otherBtn.frame.size.height + 50 , 80, 20)];
+    UIButton *ForgetSecret = [[UIButton alloc]init];
+    ForgetSecret.sd_layout.widthIs(70).heightIs(20).xIs(_loginbtn.frame.origin.x + _loginbtn.frame.size.width - 70).yIs(registerbtn.frame.origin.y);
+    
     NSMutableAttributedString *title1 = [[NSMutableAttributedString alloc] initWithString:@"忘记密码"];
     NSRange titleRange1 = {0,[title length]};
     [title1 addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:titleRange1];
@@ -293,7 +304,7 @@
  *  跳转注册和忘记密码界面
  */
 - (void)registerb {
-    NSLog(@"跳转注册");
+    //NSLog(@"跳转注册");
     
     ZSRegisterViewController *registerVC= [[ZSRegisterViewController alloc]init];
     
@@ -302,7 +313,9 @@
 }
 
 - (void)Forget {
-    NSLog(@"跳转改密");
+    //NSLog(@"跳转改密");
+    ZSChangePasswordVC *changeVC = [[ZSChangePasswordVC alloc]init];
+    [self.navigationController pushViewController:changeVC animated:YES];
 }
 
 /**

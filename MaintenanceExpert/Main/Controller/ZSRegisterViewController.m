@@ -7,285 +7,170 @@
 //
 
 #import "ZSRegisterViewController.h"
-#import "SDAutoLayout.h"
+#import "ZSRegisterCustomerVC.h"
+
 
 @interface ZSRegisterViewController (){
     
-    UIImageView* topImageView;
-    UIImageView* logoView;
-    UITextView* textV1;
-    UIButton* nextStepBtn;
-    UIView* phoneNum;
-    UIView* messageNum;
-    UIView* passwordNum;
-    UIView* passwordTwo;
-    
+    UIButton* msgBtn;
 }
 
 @end
+
 
 @implementation ZSRegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"注册帐号";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    
     [self creatView];
+    
+    
 }
 
 
 - (void)creatView {
     
-    [self topImageVAndType];
-    [self phoneNum];
-    [self messageNum];
-    [self passwordNum];
+    [self phoneNumber];
+    [self messageNumber];
+    [self passwordNumber];
     [self nextStepOfBtn];
 }
 
-//  顶部 Logo 和 注册类型
-- (void)topImageVAndType {
-    
-    topImageView = [[UIImageView alloc] init];
-    topImageView.backgroundColor = [UIColor orangeColor];
-    CGRect frame = topImageView.frame;
-    frame.size = CGSizeMake(100, 200);
-    topImageView.frame = frame;
-    [self.view addSubview:topImageView];
-    
-    topImageView.sd_layout
-    .leftSpaceToView(self.view,0)
-    .topSpaceToView(self.view,64)
-    .rightSpaceToView(self.view,0);
-    
-    //  Logo
-    logoView = [[UIImageView alloc] init];
-    logoView.backgroundColor = [UIColor blueColor];
-    [topImageView addSubview:logoView];
-    
-    logoView.sd_layout
-    .leftSpaceToView(topImageView, 50)
-    .rightSpaceToView(topImageView, 50)
-    .topSpaceToView(topImageView, 30)
-    .bottomSpaceToView(topImageView, 30);
-    
-    //  注册类型
-    textV1 = [[UITextView alloc] init];
-    textV1.backgroundColor = [UIColor cyanColor];
-    textV1.editable = NO;
-    [textV1 setText:@"请选择注册类型:"];
-    textV1.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:textV1];
-    
-    textV1.sd_layout
-    .leftSpaceToView(self.view, 30)
-    .topSpaceToView(topImageView, 20)
-    .heightIs(30)
-    .widthIs(120);
-}
+
 
 //  手机号
-- (void)phoneNum {
+- (void)phoneNumber {
     
     //  手机号  top 50  zishen 40  left 20
-    phoneNum = [[UIView alloc] init];
-    phoneNum.backgroundColor = [UIColor cyanColor];
-    [self.view addSubview:phoneNum];
-    
-    phoneNum.sd_layout
-    .topSpaceToView(textV1, 40)
-    .leftSpaceToView(self.view, 20)
-    .rightSpaceToView(self.view, 20)
-    .heightIs(50);
-    
     //  图
     UIImageView* imageV = [[UIImageView alloc] init];
     imageV.backgroundColor = [UIColor yellowColor];
     imageV.image = [UIImage imageNamed:@"icon_signin_phone"];
-    [phoneNum addSubview:imageV];
+    [self.view addSubview:imageV];
     
     imageV.sd_layout
-    .topSpaceToView(phoneNum, 10)
-    .leftSpaceToView(phoneNum, 5)
-    .widthIs(25)
-    .heightIs(30);
+    .topSpaceToView(_textViewType, 40 + 64)
+    .leftSpaceToView(self.view, 30)
+    .widthIs(30)
+    .heightIs(40);
     //  输入框
-    UITextField* textF = [[UITextField alloc] init];
-    textF.backgroundColor = [UIColor yellowColor];
-    textF.placeholder = @"请输入手机号";
-    [phoneNum addSubview:textF];
+    _phoneTF = [[UITextField alloc] init];
+    _phoneTF.backgroundColor = [UIColor yellowColor];
+    _phoneTF.placeholder = @"请输入手机号";
+    [self.view addSubview:_phoneTF];
     
-    textF.sd_layout
+    _phoneTF.sd_layout
     .topEqualToView(imageV)
     .leftSpaceToView(imageV, 5)
-    .rightSpaceToView(phoneNum, 10)
-    .heightIs(30);
+    .rightSpaceToView(self.view, 30)
+    .heightIs(40);
     //  横线
     UIView* line = [[UIView alloc] init];
     line.backgroundColor = [UIColor grayColor];
-    [phoneNum addSubview:line];
+    [self.view addSubview:line];
     
     line.sd_layout
-    .leftSpaceToView(phoneNum, 1)
-    .bottomSpaceToView(phoneNum, 1)
-    .rightSpaceToView(phoneNum, 1)
+    .leftSpaceToView(self.view, 30)
+    .topSpaceToView(imageV, 1)
+    .rightSpaceToView(self.view, 30)
     .heightIs(1);
     
 }
 
 //  验证码
-- (void)messageNum {
+- (void)messageNumber {
     
     //  验证码
-    messageNum = [[UIView alloc] init];
-    messageNum.backgroundColor = [UIColor cyanColor];
-    [self.view addSubview:messageNum];
-    
-    messageNum.sd_layout
-    .topSpaceToView(phoneNum, 10)
-    .leftSpaceToView(self.view, 20)
-    .rightSpaceToView(self.view, 20)
-    .heightIs(50);
-    
     //  图
     UIImageView* imageV = [[UIImageView alloc] init];
     imageV.backgroundColor = [UIColor yellowColor];
     imageV.image = [UIImage imageNamed:@"alert_login_yzm"];
-    [messageNum addSubview:imageV];
+    [self.view addSubview:imageV];
     
     imageV.sd_layout
-    .topSpaceToView(messageNum, 10)
-    .leftSpaceToView(messageNum, 5)
-    .widthIs(25)
-    .heightIs(30);
+    .topSpaceToView(_phoneTF, 20)
+    .leftSpaceToView(self.view, 30)
+    .widthIs(30)
+    .heightIs(40);
     //  输入框
-    UITextField* textF = [[UITextField alloc] init];
-    textF.backgroundColor = [UIColor yellowColor];
-    textF.placeholder = @"验证码";
-    [messageNum addSubview:textF];
-#warning 验证码按钮！！！！！！！！！！！！！！！！！！！！ 调用的 获取验证码的 方法
-    textF.sd_layout
+    _messageTF = [[UITextField alloc] init];
+    _messageTF.backgroundColor = [UIColor yellowColor];
+    _messageTF.placeholder = @"请输入验证码";
+    [self.view addSubview:_messageTF];
+    
+    _messageTF.sd_layout
     .topEqualToView(imageV)
     .leftSpaceToView(imageV, 5)
-    .rightSpaceToView(messageNum, 120)
-    .heightIs(30);
+    .rightSpaceToView(self.view, 150)
+    .heightIs(40);
+#warning 验证码按钮！！！！！！！！！！！！！！！！！！！！ 调用的 获取验证码的 方法
     //  获取验证码
-    UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.backgroundColor = [UIColor orangeColor];
-    [btn setTitle:@"获取验证码" forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:14];
-    [btn addTarget:self action:@selector(extractMsg) forControlEvents:UIControlEventTouchDown];
-    [messageNum addSubview:btn];
+    msgBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    msgBtn.backgroundColor = [UIColor orangeColor];
+    [msgBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+    msgBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [msgBtn addTarget:self action:@selector(startTime) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:msgBtn];
     
-    btn.sd_layout
-    .leftSpaceToView(textF, 10)
-    .topEqualToView(textF)
-    .rightSpaceToView(messageNum, 0)
+    msgBtn.sd_layout
+    .leftSpaceToView(_messageTF, 10)
+    .topEqualToView(_messageTF)
+    .rightSpaceToView(self.view, 30)
     .widthIs(90)
-    .heightIs(30);
+    .heightIs(40);
     //  横线
     UIView* line = [[UIView alloc] init];
     line.backgroundColor = [UIColor grayColor];
-    [messageNum addSubview:line];
+    [self.view addSubview:line];
     
     line.sd_layout
-    .leftSpaceToView(messageNum, 1)
-    .bottomSpaceToView(messageNum, 1)
-    .rightSpaceToView(messageNum, 1)
+    .leftSpaceToView(self.view, 30)
+    .topSpaceToView(imageV, 1)
+    .rightSpaceToView(self.view, 30)
     .heightIs(1);
     
 }
 
 //  密码
-- (void)passwordNum {
+- (void)passwordNumber {
     
     //  密码
-    passwordNum = [[UIView alloc] init];
-    passwordNum.backgroundColor = [UIColor cyanColor];
-    [self.view addSubview:passwordNum];
-    
-    passwordNum.sd_layout
-    .topSpaceToView(messageNum, 10)
-    .leftSpaceToView(self.view, 20)
-    .rightSpaceToView(self.view, 20)
-    .heightIs(50);
-    
     //  图
     UIImageView* imageV = [[UIImageView alloc] init];
     imageV.backgroundColor = [UIColor yellowColor];
     imageV.image = [UIImage imageNamed:@"alert_login_pass"];
-    [passwordNum addSubview:imageV];
+    [self.view addSubview:imageV];
     
     imageV.sd_layout
-    .topSpaceToView(passwordNum, 10)
-    .leftSpaceToView(passwordNum, 5)
-    .widthIs(25)
-    .heightIs(30);
+    .topSpaceToView(_messageTF, 20)
+    .leftSpaceToView(self.view, 30)
+    .widthIs(30)
+    .heightIs(40);
     //  输入框
-    UITextField* textF = [[UITextField alloc] init];
-    textF.backgroundColor = [UIColor yellowColor];
-    textF.placeholder = @"请输入密码";
-    [passwordNum addSubview:textF];
+    _passwordTF = [[UITextField alloc] init];
+    _passwordTF.backgroundColor = [UIColor yellowColor];
+    _passwordTF.placeholder = @"请输入密码";
+    [self.view addSubview:_passwordTF];
     
-    textF.sd_layout
+    _passwordTF.sd_layout
     .topEqualToView(imageV)
     .leftSpaceToView(imageV, 5)
-    .rightSpaceToView(passwordNum, 10)
-    .heightIs(30);
+    .rightSpaceToView(self.view, 30)
+    .heightIs(40);
     //  横线
     UIView* line = [[UIView alloc] init];
     line.backgroundColor = [UIColor grayColor];
-    [passwordNum addSubview:line];
+    [self.view addSubview:line];
     
     line.sd_layout
-    .leftSpaceToView(passwordNum, 1)
-    .bottomSpaceToView(passwordNum, 1)
-    .rightSpaceToView(passwordNum, 1)
-    .heightIs(1);
-    
-    //  确认密码  二次输入
-    passwordTwo = [[UIView alloc] init];
-    passwordTwo.backgroundColor = [UIColor cyanColor];
-    [self.view addSubview:passwordTwo];
-    
-    passwordTwo.sd_layout
-    .topSpaceToView(passwordNum, 10)
-    .leftSpaceToView(self.view, 20)
-    .rightSpaceToView(self.view, 20)
-    .heightIs(50);
-    
-    //  图
-    UIImageView* imageV2 = [[UIImageView alloc] init];
-    imageV2.backgroundColor = [UIColor yellowColor];
-    imageV2.image = [UIImage imageNamed:@"alert_login_pass"];
-    [passwordTwo addSubview:imageV2];
-    
-    imageV2.sd_layout
-    .topSpaceToView(passwordTwo, 10)
-    .leftSpaceToView(passwordTwo, 5)
-    .widthIs(25)
-    .heightIs(30);
-    //  输入框
-    UITextField* textF2 = [[UITextField alloc] init];
-    textF2.backgroundColor = [UIColor yellowColor];
-    textF2.placeholder = @"请输入密码";
-    [passwordTwo addSubview:textF2];
-    
-    textF2.sd_layout
-    .topEqualToView(imageV)
-    .leftSpaceToView(imageV, 5)
-    .rightSpaceToView(passwordTwo, 10)
-    .heightIs(30);
-    //  横线
-    UIView* line2 = [[UIView alloc] init];
-    line2.backgroundColor = [UIColor grayColor];
-    [passwordTwo addSubview:line2];
-    
-    line2.sd_layout
-    .leftSpaceToView(passwordTwo, 1)
-    .bottomSpaceToView(passwordTwo, 1)
-    .rightSpaceToView(passwordTwo, 1)
+    .leftSpaceToView(self.view, 30)
+    .topSpaceToView(imageV, 1)
+    .rightSpaceToView(self.view, 30)
     .heightIs(1);
     
 }
@@ -294,35 +179,172 @@
 - (void)nextStepOfBtn {
     
     //  注册按钮
-    nextStepBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    nextStepBtn.backgroundColor = [UIColor cyanColor];
-    [nextStepBtn setTitle:@"注   册" forState:UIControlStateNormal];
-    [nextStepBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [nextStepBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
-    [nextStepBtn addTarget:self action:@selector(btnOfRegistration:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:nextStepBtn];
+    _nextStepBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _nextStepBtn.backgroundColor = [UIColor cyanColor];
+    [_nextStepBtn setTitle:@"注   册" forState:UIControlStateNormal];
+    [_nextStepBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_nextStepBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+#warning 单击并移出按钮范围 进入工程师界面，单击 进入客户界面
+    [_nextStepBtn addTarget:self action:@selector(tabButtonTapped:forEvent:) forControlEvents:UIControlEventTouchDown];
+    [_nextStepBtn addTarget:self action:@selector(repeatBtnTapped:forEvent:) forControlEvents:UIControlEventTouchDownRepeat];    [self.view addSubview:_nextStepBtn];
     
-    nextStepBtn.sd_layout
+    _nextStepBtn.sd_layout
     .leftSpaceToView(self.view, 78)
-    .topSpaceToView(passwordTwo, 40)
-    .heightIs(35)
-    .widthIs(220);
+    .rightSpaceToView(self.view, 78)
+    .topSpaceToView(_passwordTF, 60)
+    .heightIs(35);
 }
 
-
 //  获取 验证码
-- (void)extractMsg {
+//  点击 获取验证码后 倒计时、并按钮变灰
+- (void)startTime {
     
+    __block int timeout= 59; //倒计时时间
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    
+    dispatch_source_set_event_handler(_timer, ^{
+        
+        if(timeout<=0){ //倒计时结束，关闭
+            
+            dispatch_source_cancel(_timer);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                //设置界面的按钮显示 根据自己需求设置
+                
+                [msgBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                
+                msgBtn.userInteractionEnabled = YES;
+            });
+            
+        }else{
+            
+            //            int minutes = timeout / 60;
+            int seconds = timeout % 60;
+            
+            NSString *strTime = [NSString stringWithFormat:@"%.2d", seconds];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                //设置界面的按钮显示 根据自己需求设置
+                
+                [UIView beginAnimations:nil context:nil];
+                
+                [UIView setAnimationDuration:1];
+                
+                [msgBtn setTitle:[NSString stringWithFormat:@"%@秒后重发",strTime] forState:UIControlStateNormal];
+                
+                [UIView commitAnimations];
+                
+                msgBtn.userInteractionEnabled = NO;
+                
+            });
+            
+            timeout--;
+        }
+    });
+    
+    dispatch_resume(_timer);
 }
 
 
 //  注 册 按 钮 方法
-- (void)btnOfRegistration:(NSNumber* )number {
-    
-    
+//  One
+- (void)tabButtonTapped:(UIButton *)sender forEvent:(UIEvent *)event {
+    [self performSelector:@selector(btnOfRegistration:) withObject:sender afterDelay:0.2];
+}
+//  Two
+- (void)repeatBtnTapped:(UIButton *)sender forEvent:(UIEvent *)event {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(btnOfRegistration:) object:sender];
+    // 延长0.2 秒
+    [self performSelector:@selector(btnOfDoubleTouch:) withObject:sender afterDelay:0.2];
 }
 
+//  注 册 按 钮 方法
+- (void)btnOfRegistration:(NSNumber* )number {
+    
+    ZSRegisterCustomerVC* custormerVC = [[ZSRegisterCustomerVC alloc] init];
+    
+    [self.navigationController pushViewController:custormerVC animated:YES];
+    
+}
+#warning 单击并移出按钮范围 进入工程师界面，单击 进入客户界面
 
+
+/**
+ *  键盘响应
+ *
+ */
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [_phoneTF resignFirstResponder];
+    [_messageTF resignFirstResponder];
+    [_passwordTF resignFirstResponder];
+}
+
+////移动UIView
+//-(void)transformView:(NSNotification *)aNSNotification
+//{
+//    //获取键盘弹出前的Rect
+//    NSValue *keyBoardBeginBounds=[[aNSNotification userInfo]objectForKey:UIKeyboardFrameBeginUserInfoKey];
+//    CGRect beginRect=[keyBoardBeginBounds CGRectValue];
+//    
+//    //获取键盘弹出后的Rect
+//    NSValue *keyBoardEndBounds=[[aNSNotification userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey];
+//    CGRect  endRect=[keyBoardEndBounds CGRectValue];
+//    
+//    //获取键盘位置变化前后纵坐标Y的变化值
+//    CGFloat deltaY=endRect.origin.y-beginRect.origin.y;
+//    NSLog(@"看看这个变化的Y值:%f",deltaY);
+//    
+//    //在0.25s内完成self.view的Frame的变化，等于是给self.view添加一个向上移动deltaY的动画
+//    [UIView animateWithDuration:0.25f animations:^{
+//        [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y+deltaY, self.view.frame.size.width, self.view.frame.size.height)];
+//    }];
+//}
+
+
+#pragma mark - 屏幕上弹
+//-(void)textFieldDidBeginEditing:(UITextField *)textField
+//{
+//    //键盘高度216
+//    
+//    //滑动效果（动画）
+//    NSTimeInterval animationDuration = 0.30f;
+//    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+//    [UIView setAnimationDuration:animationDuration];
+//    
+//    //将视图的Y坐标向上移动，以使下面腾出地方用于软键盘的显示
+//    self.view.frame = CGRectMake(0, -100, self.view.frame.size.width, self.view.frame.size.height);//64-216
+//    
+//    [UIView commitAnimations];
+//}
+//
+//#pragma mark -屏幕恢复
+//-(void)textFieldDidEndEditing:(UITextField *)textField
+//{
+//    //滑动效果
+//    NSTimeInterval animationDuration = 0.30f;
+//    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+//    [UIView setAnimationDuration:animationDuration];
+//    
+//    //恢复屏幕
+//    self.view.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height);//64-216
+//    
+//    [UIView commitAnimations];
+//}
+//
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -330,13 +352,12 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 @end
