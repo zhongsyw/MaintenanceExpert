@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57599A651DB9A520007BC223 /* ZSRegisterCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A621DB9A520007BC223 /* ZSRegisterCustomerVC.m */; };
+		57599A661DB9A520007BC223 /* ZSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A641DB9A520007BC223 /* ZSRegisterViewController.m */; };
+		57599A6E1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A6B1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		57599A6F1DB9A5AD007BC223 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A6D1DB9A5AD007BC223 /* UIView+SDAutoLayout.m */; };
 		5768C1E41DB5B7CF0069B421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5768C1E21DB5B7CF0069B421 /* Main.storyboard */; };
 		5768C1E61DB5B7CF0069B421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5768C1E51DB5B7CF0069B421 /* Assets.xcassets */; };
 		5768C1E91DB5B7CF0069B421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5768C1E71DB5B7CF0069B421 /* LaunchScreen.storyboard */; };
@@ -47,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57599A611DB9A520007BC223 /* ZSRegisterCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRegisterCustomerVC.h; sourceTree = "<group>"; };
+		57599A621DB9A520007BC223 /* ZSRegisterCustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRegisterCustomerVC.m; sourceTree = "<group>"; };
+		57599A631DB9A520007BC223 /* ZSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRegisterViewController.h; sourceTree = "<group>"; };
+		57599A641DB9A520007BC223 /* ZSRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRegisterViewController.m; sourceTree = "<group>"; };
+		57599A671DB9A538007BC223 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = MaintenanceExpert/Main/Controller/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		57599A691DB9A5AD007BC223 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
+		57599A6A1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		57599A6B1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		57599A6C1DB9A5AD007BC223 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		57599A6D1DB9A5AD007BC223 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		5768C1D61DB5B7CF0069B421 /* MaintenanceExpert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaintenanceExpert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5768C1E31DB5B7CF0069B421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5768C1E51DB5B7CF0069B421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +128,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57599A681DB9A5AD007BC223 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				57599A691DB9A5AD007BC223 /* SDAutoLayout.h */,
+				57599A6A1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.h */,
+				57599A6B1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m */,
+				57599A6C1DB9A5AD007BC223 /* UIView+SDAutoLayout.h */,
+				57599A6D1DB9A5AD007BC223 /* UIView+SDAutoLayout.m */,
+			);
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
 		5768C1CD1DB5B7CF0069B421 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +277,10 @@
 				5768C2381DB5B9DE0069B421 /* ZSNavigationController.m */,
 				5787E8941DB866E40062249F /* ZSLoginViewController.h */,
 				5787E8951DB866E40062249F /* ZSLoginViewController.m */,
+				57599A631DB9A520007BC223 /* ZSRegisterViewController.h */,
+				57599A641DB9A520007BC223 /* ZSRegisterViewController.m */,
+				57599A611DB9A520007BC223 /* ZSRegisterCustomerVC.h */,
+				57599A621DB9A520007BC223 /* ZSRegisterCustomerVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +295,7 @@
 		5768C2151DB5B9050069B421 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				57599A671DB9A538007BC223 /* PrefixHeader.pch */,
 				5787E89D1DB8A9250062249F /* UIbutton.h */,
 				5787E89E1DB8A9250062249F /* UIbutton.m */,
 			);
@@ -406,6 +437,7 @@
 		5768C2261DB5B9050069B421 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				57599A681DB9A5AD007BC223 /* SDAutoLayout */,
 				5768C2271DB5B9050069B421 /* AppDelegate.h */,
 				5768C2281DB5B9050069B421 /* AppDelegate.m */,
 				5768C2291DB5B9050069B421 /* main.m */,
@@ -596,6 +628,7 @@
 				5768C23F1DB5BAFC0069B421 /* ZSOrderViewController.m in Sources */,
 				5768C2391DB5B9DE0069B421 /* ZSNavigationController.m in Sources */,
 				5768C22E1DB5B9050069B421 /* ViewController.m in Sources */,
+				57599A6F1DB9A5AD007BC223 /* UIView+SDAutoLayout.m in Sources */,
 				5768C2541DB5BD4C0069B421 /* ZSTabBar.m in Sources */,
 				5768C2421DB5BB1E0069B421 /* ZSEditAndReceiveViewController.m in Sources */,
 				5768C2511DB5BC600069B421 /* UIImage+Image.m in Sources */,
@@ -603,7 +636,10 @@
 				5768C2361DB5B9AA0069B421 /* ZSTabBarController.m in Sources */,
 				5768C2451DB5BB2C0069B421 /* ZSMessageViewController.m in Sources */,
 				5768C23C1DB5BAE50069B421 /* ZSHomeViewController.m in Sources */,
+				57599A651DB9A520007BC223 /* ZSRegisterCustomerVC.m in Sources */,
 				5787E8961DB866E40062249F /* ZSLoginViewController.m in Sources */,
+				57599A6E1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				57599A661DB9A520007BC223 /* ZSRegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +780,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/koka/Desktop/MaintenanceExpert/MaintenanceExpert/Main/Controller/PrefixHeader.pch;
 				INFOPLIST_FILE = MaintenanceExpert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -756,6 +794,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/koka/Desktop/MaintenanceExpert/MaintenanceExpert/Main/Controller/PrefixHeader.pch;
 				INFOPLIST_FILE = MaintenanceExpert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -8,6 +8,7 @@
 
 #import "ZSLoginViewController.h"
 #import "ZSNavigationController.h"
+#import "ZSRegisterViewController.h"
 
 #import "UIView+ZSExtension.h"
 #import "UIbutton.h"
@@ -293,6 +294,11 @@
  */
 - (void)registerb {
     NSLog(@"跳转注册");
+    
+    ZSRegisterViewController *registerVC= [[ZSRegisterViewController alloc]init];
+    
+    [self.navigationController pushViewController:registerVC animated:YES];
+    
 }
 
 - (void)Forget {
