@@ -60,10 +60,10 @@
     .heightIs(40);
     //  输入框
     _phoneTF = [[UITextField alloc] init];
-    _phoneTF.backgroundColor = [UIColor yellowColor];
+    
     _phoneTF.placeholder = @"请输入手机号";
     [self.view addSubview:_phoneTF];
-    
+    _phoneTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     _phoneTF.sd_layout
     .topEqualToView(imageV)
     .leftSpaceToView(imageV, 5)
@@ -99,10 +99,10 @@
     .heightIs(40);
     //  输入框
     _messageTF = [[UITextField alloc] init];
-    _messageTF.backgroundColor = [UIColor yellowColor];
+    
     _messageTF.placeholder = @"请输入验证码";
     [self.view addSubview:_messageTF];
-    
+    _messageTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     _messageTF.sd_layout
     .topEqualToView(imageV)
     .leftSpaceToView(imageV, 5)
@@ -153,7 +153,8 @@
     .heightIs(40);
     //  输入框
     _passwordTF = [[UITextField alloc] init];
-    _passwordTF.backgroundColor = [UIColor yellowColor];
+    _passwordTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+
     _passwordTF.placeholder = @"请输入密码";
     [self.view addSubview:_passwordTF];
     

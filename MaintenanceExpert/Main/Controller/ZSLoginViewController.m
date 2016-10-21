@@ -155,7 +155,7 @@
     
     button.backgroundColor = [UIColor colorWithRed:41.0 / 255.0 green:182.0 / 255.0 blue:246.0 / 255.0 alpha:1];
     button.layer.cornerRadius = 10;
-    [ button setTitle:@"登           陆" forState:UIControlStateNormal];
+    [ button setTitle:@"登           录" forState:UIControlStateNormal];
     
     _loginbtn = button;
     
