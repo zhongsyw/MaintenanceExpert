@@ -10,7 +10,7 @@
 #import "ZSNavigationController.h"
 #import "ZSRegisterViewController.h"
 #import "ZSChangePasswordVC.h"
-
+#import "XLWaveView.h"
 
 #import "UIView+ZSExtension.h"
 #import "UIbutton.h"
@@ -22,6 +22,13 @@
 
 @implementation ZSLoginViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+
+    
+    
+}
 
 - (void)viewDidLoad {
     
@@ -39,7 +46,8 @@
     
     [self createUI];
 
-   
+    
+    
     
 //    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    self.navigationItem.backBarButtonItem = item;
@@ -108,15 +116,7 @@
     
     [self.view addSubview:phonetextfield];
     [self.view addSubview:phonetextfield];
-    
-//    UIImageView *rightView1 = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth - 110, -2, 30, 25)];
-//    rightView1.image = [UIImage imageNamed:@"login_phone-1"];
-//    rightView1.contentMode =UIViewContentModeScaleAspectFit;
-//    CGRect frame1 = rightView1.frame;
-//    frame1.size = CGSizeMake(40, 40);
-//    rightView1.contentMode = UIViewContentModeCenter;
-//    phonetextfield.rightView = rightView1;
-//    phonetextfield.rightViewMode = UITextFieldViewModeAlways;
+
     _phone = phonetextfield;
 
     
@@ -164,7 +164,28 @@
 }
 
 - (void)loginclick {
-    NSLog(@"登录");
+    
+    
+    if ([self.phone.text isEqualToString:@"1"] && [self.secret.text isEqualToString:@"1"]) {
+        UIAlertView *aler = [[UIAlertView alloc]initWithTitle:@"登录成功" message:@"等稍后" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        aler.alertViewStyle = UIAlertViewStyleDefault;
+        [aler show];
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:_phone.text forKey:@"username"];
+        NSString *user = [userDefaults stringForKey:@"username"];
+        NSLog(@"-----%@",user);
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }else {
+        UIAlertView *aler = [[UIAlertView alloc]initWithTitle:@"登录失败" message:@"用户名密码输入错误" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        aler.alertViewStyle = UIAlertViewStyleDefault;
+        [aler show];
+    }
+
+    
+    
+     NSLog(@"%@",_phone.text);
 }
 
 /**
@@ -281,7 +302,10 @@
     
     
     UIButton *ForgetSecret = [[UIButton alloc]init];
-    ForgetSecret.sd_layout.widthIs(70).heightIs(20).xIs(_loginbtn.frame.origin.x + _loginbtn.frame.size.width - 70).yIs(registerbtn.frame.origin.y);
+    ForgetSecret.sd_layout.widthIs(70)
+                .heightIs(20)
+                .xIs(_loginbtn.frame.origin.x + _loginbtn.frame.size.width - 70)
+                .yIs(registerbtn.frame.origin.y);
     
     NSMutableAttributedString *title1 = [[NSMutableAttributedString alloc] initWithString:@"忘记密码"];
     NSRange titleRange1 = {0,[title length]};

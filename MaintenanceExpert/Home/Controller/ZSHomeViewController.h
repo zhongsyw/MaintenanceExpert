@@ -10,4 +10,6 @@
 
 @interface ZSHomeViewController : UIViewController
 
+@property (assign, nonatomic) NSInteger imgCount;
+
 @end

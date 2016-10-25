@@ -1,0 +1,24 @@
+PODS:
+  - MJRefresh (3.1.12)
+  - SDAutoLayout (2.1.7)
+  - SDCycleScrollView (1.64):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.0):
+    - SDWebImage/Core (= 3.8.0)
+  - SDWebImage/Core (3.8.0)
+
+DEPENDENCIES:
+  - MJRefresh
+  - SDAutoLayout (= 2.1.7)
+  - SDCycleScrollView (= 1.64)
+  - SDWebImage (= 3.8)
+
+SPEC CHECKSUMS:
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
+  SDCycleScrollView: 806fedb9342ab03b58b84442f985517b42c7cbb7
+  SDWebImage: 7d9fe229266696de91eadf840c77ca15efd4bbd2
+
+PODFILE CHECKSUM: 946c66be6b85b712852fe021bf497766745dea47
+
+COCOAPODS: 1.1.0.rc.3

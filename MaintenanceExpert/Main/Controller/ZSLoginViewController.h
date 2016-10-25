@@ -16,6 +16,8 @@
 @property(nonatomic,strong)UITextField *phone;
 @property(nonatomic,strong)UITextField *secret;
 
+
+
 /**
  *  第三方登录，每种登录的button的tag值来区分
  */

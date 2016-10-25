@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571ADD1F1DBF49590095D244 /* ZSHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 571ADD1D1DBF49590095D244 /* ZSHomeTableViewCell.m */; };
+		571ADD201DBF49590095D244 /* ZSHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571ADD1E1DBF49590095D244 /* ZSHomeTableViewCell.xib */; };
 		57599A651DB9A520007BC223 /* ZSRegisterCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A621DB9A520007BC223 /* ZSRegisterCustomerVC.m */; };
 		57599A661DB9A520007BC223 /* ZSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A641DB9A520007BC223 /* ZSRegisterViewController.m */; };
-		57599A6E1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A6B1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m */; };
-		57599A6F1DB9A5AD007BC223 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A6D1DB9A5AD007BC223 /* UIView+SDAutoLayout.m */; };
 		5768C1E41DB5B7CF0069B421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5768C1E21DB5B7CF0069B421 /* Main.storyboard */; };
 		5768C1E61DB5B7CF0069B421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5768C1E51DB5B7CF0069B421 /* Assets.xcassets */; };
 		5768C1E91DB5B7CF0069B421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5768C1E71DB5B7CF0069B421 /* LaunchScreen.storyboard */; };
@@ -29,10 +29,24 @@
 		5768C24E1DB5BC3A0069B421 /* UIView+ZSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5768C24D1DB5BC3A0069B421 /* UIView+ZSExtension.m */; };
 		5768C2511DB5BC600069B421 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 5768C2501DB5BC600069B421 /* UIImage+Image.m */; };
 		5768C2541DB5BD4C0069B421 /* ZSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5768C2531DB5BD4C0069B421 /* ZSTabBar.m */; };
+		5771FDE51DBDE1B400003DCC /* XLWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDE41DBDE1B400003DCC /* XLWaveView.m */; };
+		5771FE031DBDE2CF00003DCC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5771FDE71DBDE2CF00003DCC /* LICENSE */; };
+		5771FE041DBDE2CF00003DCC /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDEA1DBDE2CF00003DCC /* MASCompositeConstraint.m */; };
+		5771FE051DBDE2CF00003DCC /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDED1DBDE2CF00003DCC /* MASConstraint.m */; };
+		5771FE061DBDE2CF00003DCC /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDEF1DBDE2CF00003DCC /* MASConstraintMaker.m */; };
+		5771FE071DBDE2CF00003DCC /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDF11DBDE2CF00003DCC /* MASLayoutConstraint.m */; };
+		5771FE081DBDE2CF00003DCC /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDF51DBDE2CF00003DCC /* MASViewAttribute.m */; };
+		5771FE091DBDE2CF00003DCC /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDF71DBDE2CF00003DCC /* MASViewConstraint.m */; };
+		5771FE0A1DBDE2CF00003DCC /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDF91DBDE2CF00003DCC /* NSArray+MASAdditions.m */; };
+		5771FE0B1DBDE2CF00003DCC /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDFC1DBDE2CF00003DCC /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		5771FE0C1DBDE2CF00003DCC /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FDFE1DBDE2CF00003DCC /* View+MASAdditions.m */; };
+		5771FE0D1DBDE2CF00003DCC /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5771FE011DBDE2CF00003DCC /* ViewController+MASAdditions.m */; };
+		5771FE0E1DBDE2CF00003DCC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5771FE021DBDE2CF00003DCC /* README.md */; };
 		5787E8961DB866E40062249F /* ZSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5787E8951DB866E40062249F /* ZSLoginViewController.m */; };
 		5787E89F1DB8A9250062249F /* UIbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5787E89E1DB8A9250062249F /* UIbutton.m */; };
 		57D7E1E41DB9AACA005E69E2 /* ZSChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D7E1E31DB9AACA005E69E2 /* ZSChangePasswordVC.m */; };
 		57D7E1FC1DB9E378005E69E2 /* ZSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D7E1FB1DB9E378005E69E2 /* ZSMessageView.m */; };
+		81A2D96C1A28D1EBC4B17F4E /* libPods-MaintenanceExpert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6528092F46243E4DB761EA15 /* libPods-MaintenanceExpert.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,16 +67,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		571ADD1C1DBF49590095D244 /* ZSHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSHomeTableViewCell.h; sourceTree = "<group>"; };
+		571ADD1D1DBF49590095D244 /* ZSHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSHomeTableViewCell.m; sourceTree = "<group>"; };
+		571ADD1E1DBF49590095D244 /* ZSHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSHomeTableViewCell.xib; sourceTree = "<group>"; };
 		57599A611DB9A520007BC223 /* ZSRegisterCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRegisterCustomerVC.h; sourceTree = "<group>"; };
 		57599A621DB9A520007BC223 /* ZSRegisterCustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRegisterCustomerVC.m; sourceTree = "<group>"; };
 		57599A631DB9A520007BC223 /* ZSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRegisterViewController.h; sourceTree = "<group>"; };
 		57599A641DB9A520007BC223 /* ZSRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRegisterViewController.m; sourceTree = "<group>"; };
 		57599A671DB9A538007BC223 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = MaintenanceExpert/Main/Controller/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
-		57599A691DB9A5AD007BC223 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
-		57599A6A1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
-		57599A6B1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
-		57599A6C1DB9A5AD007BC223 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
-		57599A6D1DB9A5AD007BC223 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		5768C1D61DB5B7CF0069B421 /* MaintenanceExpert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaintenanceExpert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5768C1E31DB5B7CF0069B421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5768C1E51DB5B7CF0069B421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,14 +111,46 @@
 		5768C2501DB5BC600069B421 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		5768C2521DB5BD4C0069B421 /* ZSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSTabBar.h; sourceTree = "<group>"; };
 		5768C2531DB5BD4C0069B421 /* ZSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSTabBar.m; sourceTree = "<group>"; };
-		5787E8941DB866E40062249F /* ZSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSLoginViewController.h; sourceTree = "<group>"; };
-		5787E8951DB866E40062249F /* ZSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSLoginViewController.m; sourceTree = "<group>"; };
+		5771FDE31DBDE1B400003DCC /* XLWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLWaveView.h; sourceTree = "<group>"; };
+		5771FDE41DBDE1B400003DCC /* XLWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLWaveView.m; sourceTree = "<group>"; };
+		5771FDE71DBDE2CF00003DCC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5771FDE91DBDE2CF00003DCC /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		5771FDEA1DBDE2CF00003DCC /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		5771FDEB1DBDE2CF00003DCC /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		5771FDEC1DBDE2CF00003DCC /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		5771FDED1DBDE2CF00003DCC /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		5771FDEE1DBDE2CF00003DCC /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		5771FDEF1DBDE2CF00003DCC /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		5771FDF01DBDE2CF00003DCC /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		5771FDF11DBDE2CF00003DCC /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		5771FDF21DBDE2CF00003DCC /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		5771FDF31DBDE2CF00003DCC /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		5771FDF41DBDE2CF00003DCC /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		5771FDF51DBDE2CF00003DCC /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		5771FDF61DBDE2CF00003DCC /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		5771FDF71DBDE2CF00003DCC /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		5771FDF81DBDE2CF00003DCC /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		5771FDF91DBDE2CF00003DCC /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		5771FDFA1DBDE2CF00003DCC /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		5771FDFB1DBDE2CF00003DCC /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		5771FDFC1DBDE2CF00003DCC /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		5771FDFD1DBDE2CF00003DCC /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		5771FDFE1DBDE2CF00003DCC /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		5771FDFF1DBDE2CF00003DCC /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		5771FE001DBDE2CF00003DCC /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		5771FE011DBDE2CF00003DCC /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		5771FE021DBDE2CF00003DCC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5787E8941DB866E40062249F /* ZSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZSLoginViewController.h; path = ../Controller/ZSLoginViewController.h; sourceTree = "<group>"; };
+		5787E8951DB866E40062249F /* ZSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZSLoginViewController.m; path = ../Controller/ZSLoginViewController.m; sourceTree = "<group>"; };
 		5787E89D1DB8A9250062249F /* UIbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIbutton.h; path = MaintenanceExpert/Main/Controller/UIbutton.h; sourceTree = SOURCE_ROOT; };
 		5787E89E1DB8A9250062249F /* UIbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIbutton.m; path = MaintenanceExpert/Main/Controller/UIbutton.m; sourceTree = SOURCE_ROOT; };
 		57D7E1E21DB9AACA005E69E2 /* ZSChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSChangePasswordVC.h; sourceTree = "<group>"; };
 		57D7E1E31DB9AACA005E69E2 /* ZSChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSChangePasswordVC.m; sourceTree = "<group>"; };
 		57D7E1FA1DB9E378005E69E2 /* ZSMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSMessageView.h; sourceTree = "<group>"; };
 		57D7E1FB1DB9E378005E69E2 /* ZSMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSMessageView.m; sourceTree = "<group>"; };
+		6528092F46243E4DB761EA15 /* libPods-MaintenanceExpert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MaintenanceExpert.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9CB1DA0ADD916D7022FE2C /* Pods-MaintenanceExpert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaintenanceExpert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaintenanceExpert/Pods-MaintenanceExpert.debug.xcconfig"; sourceTree = "<group>"; };
+		EF99949DBB471B496024858D /* Pods-MaintenanceExpert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaintenanceExpert.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaintenanceExpert/Pods-MaintenanceExpert.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A2D96C1A28D1EBC4B17F4E /* libPods-MaintenanceExpert.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,18 +179,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57599A681DB9A5AD007BC223 /* SDAutoLayout */ = {
-			isa = PBXGroup;
-			children = (
-				57599A691DB9A5AD007BC223 /* SDAutoLayout.h */,
-				57599A6A1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.h */,
-				57599A6B1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m */,
-				57599A6C1DB9A5AD007BC223 /* UIView+SDAutoLayout.h */,
-				57599A6D1DB9A5AD007BC223 /* UIView+SDAutoLayout.m */,
-			);
-			path = SDAutoLayout;
-			sourceTree = "<group>";
-		};
 		5768C1CD1DB5B7CF0069B421 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +186,8 @@
 				5768C1F21DB5B7CF0069B421 /* MaintenanceExpertTests */,
 				5768C1FD1DB5B7CF0069B421 /* MaintenanceExpertUITests */,
 				5768C1D71DB5B7CF0069B421 /* Products */,
+				EC63BC1B2D89A0A769E8CBA5 /* Pods */,
+				FAB04BAB2F5204EC9D3DD5DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,6 +282,9 @@
 		5768C2101DB5B9050069B421 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				571ADD1C1DBF49590095D244 /* ZSHomeTableViewCell.h */,
+				571ADD1D1DBF49590095D244 /* ZSHomeTableViewCell.m */,
+				571ADD1E1DBF49590095D244 /* ZSHomeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,8 +319,6 @@
 				5768C2351DB5B9AA0069B421 /* ZSTabBarController.m */,
 				5768C2371DB5B9DE0069B421 /* ZSNavigationController.h */,
 				5768C2381DB5B9DE0069B421 /* ZSNavigationController.m */,
-				5787E8941DB866E40062249F /* ZSLoginViewController.h */,
-				5787E8951DB866E40062249F /* ZSLoginViewController.m */,
 				57D7E1E21DB9AACA005E69E2 /* ZSChangePasswordVC.h */,
 				57D7E1E31DB9AACA005E69E2 /* ZSChangePasswordVC.m */,
 				57599A631DB9A520007BC223 /* ZSRegisterViewController.h */,
@@ -315,6 +351,8 @@
 			children = (
 				5768C2521DB5BD4C0069B421 /* ZSTabBar.h */,
 				5768C2531DB5BD4C0069B421 /* ZSTabBar.m */,
+				5787E8941DB866E40062249F /* ZSLoginViewController.h */,
+				5787E8951DB866E40062249F /* ZSLoginViewController.m */,
 				57D7E1FA1DB9E378005E69E2 /* ZSMessageView.h */,
 				57D7E1FB1DB9E378005E69E2 /* ZSMessageView.m */,
 			);
@@ -447,7 +485,8 @@
 		5768C2261DB5B9050069B421 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				57599A681DB9A5AD007BC223 /* SDAutoLayout */,
+				5771FDE61DBDE2CF00003DCC /* Masonry */,
+				5771FDE21DBDE1B400003DCC /* View */,
 				5768C2271DB5B9050069B421 /* AppDelegate.h */,
 				5768C2281DB5B9050069B421 /* AppDelegate.m */,
 				5768C2291DB5B9050069B421 /* main.m */,
@@ -498,6 +537,74 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5771FDE21DBDE1B400003DCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5771FDE31DBDE1B400003DCC /* XLWaveView.h */,
+				5771FDE41DBDE1B400003DCC /* XLWaveView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5771FDE61DBDE2CF00003DCC /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				5771FDE71DBDE2CF00003DCC /* LICENSE */,
+				5771FDE81DBDE2CF00003DCC /* Masonry */,
+				5771FE021DBDE2CF00003DCC /* README.md */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		5771FDE81DBDE2CF00003DCC /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				5771FDE91DBDE2CF00003DCC /* MASCompositeConstraint.h */,
+				5771FDEA1DBDE2CF00003DCC /* MASCompositeConstraint.m */,
+				5771FDEB1DBDE2CF00003DCC /* MASConstraint+Private.h */,
+				5771FDEC1DBDE2CF00003DCC /* MASConstraint.h */,
+				5771FDED1DBDE2CF00003DCC /* MASConstraint.m */,
+				5771FDEE1DBDE2CF00003DCC /* MASConstraintMaker.h */,
+				5771FDEF1DBDE2CF00003DCC /* MASConstraintMaker.m */,
+				5771FDF01DBDE2CF00003DCC /* MASLayoutConstraint.h */,
+				5771FDF11DBDE2CF00003DCC /* MASLayoutConstraint.m */,
+				5771FDF21DBDE2CF00003DCC /* Masonry.h */,
+				5771FDF31DBDE2CF00003DCC /* MASUtilities.h */,
+				5771FDF41DBDE2CF00003DCC /* MASViewAttribute.h */,
+				5771FDF51DBDE2CF00003DCC /* MASViewAttribute.m */,
+				5771FDF61DBDE2CF00003DCC /* MASViewConstraint.h */,
+				5771FDF71DBDE2CF00003DCC /* MASViewConstraint.m */,
+				5771FDF81DBDE2CF00003DCC /* NSArray+MASAdditions.h */,
+				5771FDF91DBDE2CF00003DCC /* NSArray+MASAdditions.m */,
+				5771FDFA1DBDE2CF00003DCC /* NSArray+MASShorthandAdditions.h */,
+				5771FDFB1DBDE2CF00003DCC /* NSLayoutConstraint+MASDebugAdditions.h */,
+				5771FDFC1DBDE2CF00003DCC /* NSLayoutConstraint+MASDebugAdditions.m */,
+				5771FDFD1DBDE2CF00003DCC /* View+MASAdditions.h */,
+				5771FDFE1DBDE2CF00003DCC /* View+MASAdditions.m */,
+				5771FDFF1DBDE2CF00003DCC /* View+MASShorthandAdditions.h */,
+				5771FE001DBDE2CF00003DCC /* ViewController+MASAdditions.h */,
+				5771FE011DBDE2CF00003DCC /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		EC63BC1B2D89A0A769E8CBA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC9CB1DA0ADD916D7022FE2C /* Pods-MaintenanceExpert.debug.xcconfig */,
+				EF99949DBB471B496024858D /* Pods-MaintenanceExpert.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAB04BAB2F5204EC9D3DD5DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6528092F46243E4DB761EA15 /* libPods-MaintenanceExpert.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -505,9 +612,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5768C2031DB5B7CF0069B421 /* Build configuration list for PBXNativeTarget "MaintenanceExpert" */;
 			buildPhases = (
+				78F851E48D07313E1CAC9E00 /* [CP] Check Pods Manifest.lock */,
 				5768C1D21DB5B7CF0069B421 /* Sources */,
 				5768C1D31DB5B7CF0069B421 /* Frameworks */,
 				5768C1D41DB5B7CF0069B421 /* Resources */,
+				985CE65B7B05611C1400F25C /* [CP] Embed Pods Frameworks */,
+				238E7B56C196FC05A8DD5251 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -606,7 +716,9 @@
 			files = (
 				5768C1E91DB5B7CF0069B421 /* LaunchScreen.storyboard in Resources */,
 				5768C1E61DB5B7CF0069B421 /* Assets.xcassets in Resources */,
+				5771FE031DBDE2CF00003DCC /* LICENSE in Resources */,
 				5768C1E41DB5B7CF0069B421 /* Main.storyboard in Resources */,
+				571ADD201DBF49590095D244 /* ZSHomeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,31 +738,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		238E7B56C196FC05A8DD5251 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaintenanceExpert/Pods-MaintenanceExpert-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78F851E48D07313E1CAC9E00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		985CE65B7B05611C1400F25C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaintenanceExpert/Pods-MaintenanceExpert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5768C1D21DB5B7CF0069B421 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5768C22C1DB5B9050069B421 /* AppDelegate.m in Sources */,
+				5771FE041DBDE2CF00003DCC /* MASCompositeConstraint.m in Sources */,
+				5771FE0D1DBDE2CF00003DCC /* ViewController+MASAdditions.m in Sources */,
+				5771FE0C1DBDE2CF00003DCC /* View+MASAdditions.m in Sources */,
 				57D7E1FC1DB9E378005E69E2 /* ZSMessageView.m in Sources */,
 				5787E89F1DB8A9250062249F /* UIbutton.m in Sources */,
 				57D7E1E41DB9AACA005E69E2 /* ZSChangePasswordVC.m in Sources */,
 				5768C24E1DB5BC3A0069B421 /* UIView+ZSExtension.m in Sources */,
+				5771FE071DBDE2CF00003DCC /* MASLayoutConstraint.m in Sources */,
+				5771FE0E1DBDE2CF00003DCC /* README.md in Sources */,
+				5771FE0A1DBDE2CF00003DCC /* NSArray+MASAdditions.m in Sources */,
 				5768C22D1DB5B9050069B421 /* main.m in Sources */,
 				5768C23F1DB5BAFC0069B421 /* ZSOrderViewController.m in Sources */,
+				5771FE051DBDE2CF00003DCC /* MASConstraint.m in Sources */,
 				5768C2391DB5B9DE0069B421 /* ZSNavigationController.m in Sources */,
+				5771FE091DBDE2CF00003DCC /* MASViewConstraint.m in Sources */,
 				5768C22E1DB5B9050069B421 /* ViewController.m in Sources */,
-				57599A6F1DB9A5AD007BC223 /* UIView+SDAutoLayout.m in Sources */,
 				5768C2541DB5BD4C0069B421 /* ZSTabBar.m in Sources */,
+				5771FE081DBDE2CF00003DCC /* MASViewAttribute.m in Sources */,
 				5768C2421DB5BB1E0069B421 /* ZSEditAndReceiveViewController.m in Sources */,
 				5768C2511DB5BC600069B421 /* UIImage+Image.m in Sources */,
+				5771FDE51DBDE1B400003DCC /* XLWaveView.m in Sources */,
 				5768C2481DB5BB390069B421 /* ZSMineViewController.m in Sources */,
 				5768C2361DB5B9AA0069B421 /* ZSTabBarController.m in Sources */,
 				5768C2451DB5BB2C0069B421 /* ZSMessageViewController.m in Sources */,
+				5771FE0B1DBDE2CF00003DCC /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5768C23C1DB5BAE50069B421 /* ZSHomeViewController.m in Sources */,
 				57599A651DB9A520007BC223 /* ZSRegisterCustomerVC.m in Sources */,
+				571ADD1F1DBF49590095D244 /* ZSHomeTableViewCell.m in Sources */,
+				5771FE061DBDE2CF00003DCC /* MASConstraintMaker.m in Sources */,
 				5787E8961DB866E40062249F /* ZSLoginViewController.m in Sources */,
-				57599A6E1DB9A5AD007BC223 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				57599A661DB9A520007BC223 /* ZSRegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +961,7 @@
 		};
 		5768C2041DB5B7CF0069B421 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC9CB1DA0ADD916D7022FE2C /* Pods-MaintenanceExpert.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -804,6 +976,7 @@
 		};
 		5768C2051DB5B7CF0069B421 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF99949DBB471B496024858D /* Pods-MaintenanceExpert.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
