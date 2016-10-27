@@ -10,6 +10,7 @@
 #import "ZSLoginViewController.h"
 #import "XLWaveView.h"
 #import "UIView+ZSExtension.h"
+#import "ZSSettingViewController.h"
 
 #define XLColor(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
@@ -30,6 +31,8 @@
 @property (nonatomic, assign, getter=isShowWave) BOOL showWave;
 
 
+@property (nonatomic,strong)UIButton *loginbtn;
+@property (nonatomic,strong)UILabel *shareLabel;
 
 @end
 
@@ -61,7 +64,7 @@
         //zsfamily[@"controller"] = [ZSLoginViewController class];
         
         NSMutableDictionary *help = [NSMutableDictionary dictionary];
-        help[@"title"] = @"帮助与设置";
+        help[@"title"] = @"帮助与反馈";
         help[@"icon"] = @"share_platform_qqfriends";
         //help[@"controller"] = [ZSLoginViewController class];
         
@@ -72,7 +75,7 @@
         NSMutableDictionary *setting = [NSMutableDictionary dictionary];
         setting[@"title"] = @"设置";
         setting[@"icon"] = @"share_platform_qqfriends";
-        //setting[@"controller"] = [ZSLoginViewController class];
+        setting[@"controller"] = [ZSSettingViewController class];
         NSArray *section0 = @[dengji];
         NSArray *section1 = @[dingdan, yue];
         NSArray *section2 = @[zsfamily, help];
@@ -102,33 +105,13 @@
 {
     [super viewWillAppear:animated];
     
-//    UINavigationBar *nav = self.navigationController.navigationBar;
-//    nav.hidden = YES;
-    self.navigationController.navigationBarHidden = YES;
-    NSString *username =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    NSLog(@"username%@",username);
-    //[self setupHeaderView];
-    if (username != nil)
-    {
-        //已经登录
-        [self setupHeaderView];
-    }else{
-        
-        [self loginbtn];
-    }
 
+
+    self.navigationController.navigationBarHidden = YES;
+    [self setupHeaderView];
     
-    UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(180, 80, 80, 50)];
-    lab.text = nil;
-    lab.backgroundColor = [UIColor clearColor];
     
-    
-    [self.view addSubview:lab];
-    
-    UITapGestureRecognizer *taps = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(share:)];
-    lab.userInteractionEnabled = YES;
-    [lab addGestureRecognizer:taps];
-    
+    [self.tableView reloadData];
 }
 
 
@@ -137,13 +120,37 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-  
     self.view.backgroundColor = [UIColor whiteColor];
     
-   
+    self.navigationController.navigationBarHidden = YES;
 }
 
+- (void)loginBtnAndlab {
+    
+    self.loginbtn = [[UIButton alloc]initWithFrame:CGRectMake(KScreenWidth / 11, 55, 100, 40)];
+    
+    [self.view addSubview: self.loginbtn];
+    
+    [self.loginbtn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchDown];
+    
+   // self.loginbtn.backgroundColor = [UIColor blackColor];
+    
+    [self.view addSubview: self.loginbtn];
 
+    
+    self.shareLabel = [[UILabel alloc]initWithFrame:CGRectMake(180, 80, 80, 50)];
+    self.shareLabel.text = nil;
+    self.shareLabel.backgroundColor = [UIColor clearColor];
+    
+    
+    [self.view addSubview:self.shareLabel];
+    
+    UITapGestureRecognizer *taps = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(share:)];
+    self.shareLabel.userInteractionEnabled = YES;
+    [self.shareLabel addGestureRecognizer:taps];
+
+   
+}
 
 /**
  *
@@ -152,26 +159,81 @@
 - (void)share:(UITapGestureRecognizer *)taps {
     NSLog(@"去炫耀");
     
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"username"];
+    //[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"username"];
 }
 
 
 - (void)setupHeaderView
 {
     
-    XLWaveView *wave = [[XLWaveView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 270) Image:@"93S58PICcXy_1024.jpg" centerIcon:@"share_platform_qqfriends"];
+    NSString *username =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    NSLog(@"username%@",username);
+
+    /**
+     *  登录完成之后数据显示
+     */
+    if (username != nil)
+    {
+    XLWaveView *wave = [[XLWaveView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 270) Image:@"93S58PICcXy_1024.jpg" centerIcon:@"share_platform_qqfriends"];
+
+    wave.nameLabel.text = @"王欣誉";
+
+    wave.beizannum.text = @"18";
+
+    wave.guanzhunum.text = @"20";
+
+    wave.fensinum.text = @"2";
+   
+    wave.moneyLabel.text = @"在中数赚了1830.00元";
     
     self.waveView = wave;
     
+    [self scrollViewDidScroll:self.tableView];
+        
+    [self.tableView addSubview:wave];
+
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth , wave.height)];
+    
+    self.loginbtn.hidden = YES;
+        
+    self.shareLabel.hidden = NO;
+        
+    }else{
+    
+        /**
+         登录界面的页面参数
+         
+         */
+    XLWaveView *wave = [[XLWaveView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 270) Image:@"93S58PICcXy_1024.jpg" centerIcon:@"share_platform_qqfriends"];
+    wave.nameLabel.text = @"登录/注册";
+    wave.moneyLabel.text = @"";
+    // wave.icon.image = [UIImage imageNamed:icon];//头像
+    wave.beizannum.text = @"0";
+    wave.guanzhunum.text = @"0";
+    wave.fensinum.text = @"0";
+    wave.moneyLabel.text = @"在中数赚了0.00元";
+       
+    self.waveView = wave;
     
     [self scrollViewDidScroll:self.tableView];
     
-    
     [self.tableView addSubview:wave];
-    //    self.tableView.tableHeaderView = wave;
     
-    // 与图像高度一样防止数据被遮挡
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth , wave.height)];
+
+    [self loginBtnAndlab];
+   
+    self.shareLabel.hidden = YES;
+    }
+   
+}
+
+
+
+- (void)click {
+    
+    ZSLoginViewController *zslogin = [[ZSLoginViewController alloc]init];
+    [self presentViewController:zslogin animated:YES completion:nil];
     
 }
 
@@ -225,20 +287,44 @@
         cell.imageView.image = [UIImage imageNamed:dict[@"icon"]];
     }
 
-    switch (indexPath.section) {
-        case 1:
-            if (indexPath.row == 0) {
-                cell.detailTextLabel.text = @"4";
-            }
-            if (indexPath.row == 1) {
-                cell.detailTextLabel.text = @"￥160000";
-            }
-            break;
-            
-        default:
-            break;
+    NSString *username =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    if (username != nil)
+    {
+        switch (indexPath.section) {
+            case 1:
+                if (indexPath.row == 0) {
+                    cell.detailTextLabel.text = @"4";
+                }
+                if (indexPath.row == 1) {
+                    cell.detailTextLabel.text = @"￥160000";
+                }
+                break;
+                
+            default:
+                break;
+        }
+        
+
+    }else{
+        switch (indexPath.section) {
+            case 1:
+                if (indexPath.row == 0) {
+                    cell.detailTextLabel.text = @"0";
+                }
+                if (indexPath.row == 1) {
+                    cell.detailTextLabel.text = @"￥0";
+                }
+                break;
+                
+            default:
+                break;
+        }
+        
+
+        
+        
     }
-    
+
     
     
     cell.selected = YES;
@@ -262,9 +348,9 @@
         
             vc.title = self.dataList[indexPath.section][indexPath.row][@"title"];
             
-            vc.view.backgroundColor = XLColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
-            [self presentViewController:vc animated:YES completion:nil];
-
+            //vc.view.backgroundColor = XLColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
+        //[self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
         
         
         
@@ -308,28 +394,35 @@
     CGFloat offsetY = scrollView.contentOffset.y;
     
     if (offsetY < 0) {
-        
         self.waveView.frame = CGRectMake(offsetY/2, offsetY, KScreenWidth - offsetY, 270 - offsetY);  // 修改头部的frame值就行了
     }
     
-    NSLog(@"%f,%f",self.waveView.height,self.tableView.tableHeaderView.height);
+   // NSLog(@"%f,%f",self.waveView.height,self.tableView.tableHeaderView.height);
+ 
+    NSString *username =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    NSLog(@"username%@",username);
+    
+    if (username != nil)
+    {
+        self.loginbtn.hidden = YES;
+        self.shareLabel.hidden = NO;
+
+       
+    }else{
+        
+        if (offsetY >= 70) {
+            self.loginbtn.hidden = YES;
+            self.shareLabel.hidden = YES;
+
+        }else {
+            self.loginbtn.hidden = NO;
+            self.shareLabel.hidden = YES;
+
+        }
+    }
 }
 
-- (void)loginbtn {
-    
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 200, 50, 50)];
-    btn.backgroundColor = [UIColor blueColor];
-    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchDown];
-    
-    [self.view addSubview:btn];
-}
 
-- (void)click {
-    
-    ZSLoginViewController *zslogin = [[ZSLoginViewController alloc]init];
-    [self.navigationController pushViewController:zslogin animated:YES];
-   
-}
 
 
 

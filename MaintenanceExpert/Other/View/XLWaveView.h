@@ -11,6 +11,13 @@
 @interface XLWaveView : UIImageView
 
 - (instancetype)initWithFrame:(CGRect)frame Image:(NSString *)imageName centerIcon:(NSString *)icon;
+
+
+@property (nonatomic, assign) UILabel *fensinum;
+@property (nonatomic, assign) UILabel *guanzhunum;
+@property (nonatomic, assign) UILabel *beizannum;
+@property (nonatomic, assign) UILabel *moneyLabel;
+@property (nonatomic, weak) UILabel *nameLabel;
 ///** 去分享 */
 //@property (nonatomic, assign) UILabel *shareLabel;
 - (void)starWave;

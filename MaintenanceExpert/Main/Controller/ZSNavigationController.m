@@ -13,7 +13,11 @@
 #define NavBarColor [UIColor colorWithRed:250/255.0 green:227/255.0 blue:111/255.0 alpha:1.0]
 
 @interface ZSNavigationController ()
-
+{
+    
+    UIWebView *webView;
+    
+}
 @end
 
 @implementation ZSNavigationController
@@ -41,6 +45,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor blueColor];
+    self.navigationBarHidden = YES;
+//    webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+//    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.chnyoufu.com/ups_Install.htm"]];
+//    [self.view addSubview: webView];
+//    [webView loadRequest:request];
+   
+    
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -48,7 +60,7 @@
     
     if (self.viewControllers.count > 0) {
         
-        viewController.hidesBottomBarWhenPushed = YES;
+        viewController.hidesBottomBarWhenPushed = NO;
         
         
         

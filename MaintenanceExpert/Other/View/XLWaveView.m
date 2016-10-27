@@ -43,21 +43,21 @@
 /** 头像 */
 @property (nonatomic, assign) UIImageView *icon;
 /** 赚了多少钱 */
-@property (nonatomic, assign) UILabel *moneyLabel;
+//@property (nonatomic, assign) UILabel *moneyLabel;
 /** 去分享 */
 @property (nonatomic, assign) UILabel *shareLabel;
 
-@property (nonatomic, weak) UILabel *nameLabel;
+//@property (nonatomic, weak) UILabel *nameLabel;
 
 /** 被赞 */
 @property (nonatomic, assign) UILabel *beizan;
-@property (nonatomic, assign) UILabel *beizannum;
+//@property (nonatomic, assign) UILabel *beizannum;
 /** 被关注 */
 @property (nonatomic, assign) UILabel *guanzhu;
-@property (nonatomic, assign) UILabel *guanzhunum;
+//@property (nonatomic, assign) UILabel *guanzhunum;
 /** 粉丝数 */
 @property (nonatomic, assign) UILabel *fensi;
-@property (nonatomic, assign) UILabel *fensinum;
+//@property (nonatomic, assign) UILabel *fensinum;
 
 @property (nonatomic,strong) UIView *lineView;
 
@@ -309,12 +309,18 @@
         icon.height = icon.width = KScreenWidth/5;
         icon.layer.cornerRadius = icon.width * 0.5;
         icon.layer.masksToBounds = YES;
-        
+//        nameLabel.sd_layout.leftSpaceToView(self,KScreenWidth / 10)
+//        .topSpaceToView(self,64)
+//        .heightIs(50)
+//        .widthIs(200);
         icon.contentMode = UIViewContentModeScaleAspectFill;
         
         [self addSubview:icon];
         
-        icon.sd_layout.topEqualToView(self.nameLabel).rightSpaceToView(self,KScreenWidth / 10).heightIs(KScreenWidth/5).widthIs(KScreenWidth/5);
+        icon.sd_layout.topSpaceToView(self,64)
+                        .rightSpaceToView(self,KScreenWidth / 10)
+                        .heightIs(KScreenWidth/5)
+                        .widthIs(KScreenWidth/5);
 
         
         _icon = icon;
@@ -347,29 +353,6 @@
     return self;
 }
 
-//- (instancetype)initWithFrame:(CGRect)frame Image:(NSString *)imageName centerIcon:(NSString *)icon namelabeltext:(NSString *)name money:(NSString *)money beizannum:(NSString *)bzn guanzhunum:(NSString *)gzn fensinum:(NSString *)fsn {
-//    
-//    self = [super initWithFrame:frame];
-//    if (self){
-//        
-//        self.contentMode = UIViewContentModeScaleToFill;
-//        self.image = [UIImage imageNamed:imageName];//背景
-//        self.icon.image = [UIImage imageNamed:icon];//头像
-//        self.nameLabel.text = name =  @"登录";
-//        self.beizan.text = @"被赞数";
-//        self.beizannum.text = bzn = @"0";
-//        self.guanzhu.text = @"关注数";
-//        self.guanzhunum.text = gzn = @"0";
-//        self.fensi.text = @"粉丝数";
-//        self.fensinum.text = fsn = @"0";
-//        self.lineView.backgroundColor = [UIColor colorWithRed:85.0/255.0 green:85.0/255.0 blue:85.0/255.0 alpha:85.0/255.0];
-//        self.moneyLabel.text = money = @"在中数赚了0.00元";
-//        self.shareLabel.textAlignment = NSTextAlignmentLeft;
-//        self.wavePeriod = 1;
-//        self.waveLength = XLScreenW;
-//
-//    return self;
-//}
 
 - (void)starWave {
     

@@ -18,4 +18,5 @@
 @interface ZSTabBar : UITabBar
 /** tabbar的代理 */
 @property (nonatomic, weak) id<ZSTabBarDelegate> myDelegate ;
+
 @end

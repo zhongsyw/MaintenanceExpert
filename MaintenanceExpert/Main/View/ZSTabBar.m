@@ -39,6 +39,7 @@
 }
 
 
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -86,7 +87,6 @@
 //点击了发布按钮
 - (void)plusBtnDidClick
 {
-    //如果tabbar的代理实现了对应的代理方法，那么就调用代理的该方法
     if ([self.delegate respondsToSelector:@selector(tabBarPlusBtnClick:)]) {
         [self.myDelegate tabBarPlusBtnClick:self];
     }

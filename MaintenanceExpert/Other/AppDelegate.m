@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ZSTabBarController.h"
+#import "ZSNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +22,14 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
+    
+    
     ZSTabBarController *tabBarvc = [[ZSTabBarController alloc]init];
-    self.window.rootViewController = tabBarvc;
+    
+    ZSNavigationController *nav = [[ZSNavigationController alloc]initWithRootViewController:tabBarvc];
+    self.window.rootViewController = nav;
+    
+    
     
     [self.window makeKeyAndVisible];
     

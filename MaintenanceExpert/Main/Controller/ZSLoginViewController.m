@@ -27,7 +27,6 @@
     [super viewWillAppear:animated];
 
     
-    
 }
 
 - (void)viewDidLoad {
@@ -63,7 +62,7 @@
     self.view.contentMode = UIViewContentModeScaleAspectFill;
     
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
-    
+    self.navigationController.navigationBarHidden = NO;
     [self createlogo];
     
     [self createtextfield];
@@ -74,6 +73,17 @@
     
     [self createRegisterAndForgetsecret];
     
+    UIButton *leftButton = [[UIButton alloc]init];
+    leftButton.frame = CGRectMake(10, 24, 40, 40);
+    
+    [leftButton setTitle:@"返回" forState:UIControlStateNormal];
+    [leftButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:leftButton];
+}
+
+- (void)back {
+   
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)createlogo {
@@ -167,16 +177,20 @@
     
     
     if ([self.phone.text isEqualToString:@"1"] && [self.secret.text isEqualToString:@"1"]) {
-        UIAlertView *aler = [[UIAlertView alloc]initWithTitle:@"登录成功" message:@"等稍后" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        aler.alertViewStyle = UIAlertViewStyleDefault;
-        [aler show];
+//        UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"
+//                                                      message:@"正在登录"
+//                                                     delegate:self
+//                                            cancelButtonTitle:@"确定"
+//                                            otherButtonTitles:nil];
+//        [alert show];
         
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:_phone.text forKey:@"username"];
         NSString *user = [userDefaults stringForKey:@"username"];
+        
         NSLog(@"-----%@",user);
         
-        [self.navigationController popViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }else {
         UIAlertView *aler = [[UIAlertView alloc]initWithTitle:@"登录失败" message:@"用户名密码输入错误" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         aler.alertViewStyle = UIAlertViewStyleDefault;

@@ -14,6 +14,8 @@
 #import "ZSMessageViewController.h"
 #import "ZSMineViewController.h"
 
+#import "XWPopMenuController.h"
+#import "UIImage+XW.h"
 #import "ZSTabBar.h"
 #import "UIImage+Image.h"
 
@@ -116,21 +118,19 @@
 }
 #pragma mark - ------------------------------------------------------------------
 #pragma mark - ZSTabBarDelegate
-//点击中间按钮的代理方法
-- (void)tabBarPlusBtnClick:(ZSTabBar *)tabBar
-{
+- (void)tabBarPlusBtnClick:(ZSTabBar *)tabBar {
+//    NSLog(@"123");
+    XWPopMenuController *vc = [[XWPopMenuController alloc]init];
     
+    //虚化背景
+    UIImage *image = [UIImage imageWithCaputureView:self.view];
     
-    ZSEditAndReceiveViewController *plusVC = [[ZSEditAndReceiveViewController alloc] init];
+    vc.backImg = image;
     
-    ZSNavigationController *navVc = [[ZSNavigationController alloc] initWithRootViewController:plusVC];
-    
-    [self presentViewController:navVc animated:YES completion:nil];
-    
+    [self presentViewController:vc animated:NO completion:nil];
     
     
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
