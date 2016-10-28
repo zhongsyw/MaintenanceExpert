@@ -188,7 +188,6 @@
         [userDefaults setObject:_phone.text forKey:@"username"];
         NSString *user = [userDefaults stringForKey:@"username"];
         
-        NSLog(@"-----%@",user);
         
         [self dismissViewControllerAnimated:YES completion:nil];
     }else {
@@ -198,8 +197,6 @@
     }
 
     
-    
-     NSLog(@"%@",_phone.text);
 }
 
 /**

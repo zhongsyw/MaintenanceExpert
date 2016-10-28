@@ -126,13 +126,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = @"修改资料";
-    
-    UIImageView *imagevc = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth - 30, 10, 10, 22)];
-    
-    imagevc.image = [UIImage imageNamed:@"web_forward_icon"];
-    [cell addSubview:imagevc];
     
     cell.layer.cornerRadius = 5;
     

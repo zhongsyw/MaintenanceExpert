@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MineInfModel.h"
 
 @interface ZSMineInfoViewController : UIViewController
+@property(nonatomic,strong)UIImageView *userIconone;
+@property(nonatomic,strong)MineInfModel *model;
+
 
 @end

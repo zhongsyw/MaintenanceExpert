@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57075D341DC31B4400693E85 /* UIViewController+SelectPhotoIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 57075D331DC31B4400693E85 /* UIViewController+SelectPhotoIcon.m */; };
+		57075D3B1DC31B9000693E85 /* BBInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 57075D371DC31B9000693E85 /* BBInput.m */; };
+		57075D3C1DC31B9000693E85 /* BBInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57075D391DC31B9000693E85 /* BBInputView.m */; };
+		57075D3D1DC31B9000693E85 /* BBInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57075D3A1DC31B9000693E85 /* BBInputView.xib */; };
+		57075D401DC3205F00693E85 /* MineInfModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57075D3F1DC3205F00693E85 /* MineInfModel.m */; };
+		57075DF91DC347D400693E85 /* TWSpringyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57075DF81DC347D400693E85 /* TWSpringyFlowLayout.m */; };
+		57075DFC1DC3480200693E85 /* ZSMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57075DFB1DC3480200693E85 /* ZSMessageViewCell.m */; };
 		571244371DC1C82E009CBE66 /* PublishMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 571244341DC1C82E009CBE66 /* PublishMenuButton.m */; };
 		571244381DC1C82E009CBE66 /* UIImage+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 571244361DC1C82E009CBE66 /* UIImage+XW.m */; };
 		5712447E1DC1DE97009CBE66 /* ZSMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5712447D1DC1DE97009CBE66 /* ZSMineInfoViewController.m */; };
@@ -63,6 +70,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57075D321DC31B4400693E85 /* UIViewController+SelectPhotoIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SelectPhotoIcon.h"; sourceTree = "<group>"; };
+		57075D331DC31B4400693E85 /* UIViewController+SelectPhotoIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SelectPhotoIcon.m"; sourceTree = "<group>"; };
+		57075D361DC31B9000693E85 /* BBInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBInput.h; sourceTree = "<group>"; };
+		57075D371DC31B9000693E85 /* BBInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBInput.m; sourceTree = "<group>"; };
+		57075D381DC31B9000693E85 /* BBInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBInputView.h; sourceTree = "<group>"; };
+		57075D391DC31B9000693E85 /* BBInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBInputView.m; sourceTree = "<group>"; };
+		57075D3A1DC31B9000693E85 /* BBInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBInputView.xib; sourceTree = "<group>"; };
+		57075D3E1DC3205F00693E85 /* MineInfModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInfModel.h; sourceTree = "<group>"; };
+		57075D3F1DC3205F00693E85 /* MineInfModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfModel.m; sourceTree = "<group>"; };
+		57075DF71DC347D400693E85 /* TWSpringyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSpringyFlowLayout.h; sourceTree = "<group>"; };
+		57075DF81DC347D400693E85 /* TWSpringyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSpringyFlowLayout.m; sourceTree = "<group>"; };
+		57075DFA1DC3480200693E85 /* ZSMessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSMessageViewCell.h; sourceTree = "<group>"; };
+		57075DFB1DC3480200693E85 /* ZSMessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSMessageViewCell.m; sourceTree = "<group>"; };
 		571244331DC1C82E009CBE66 /* PublishMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishMenuButton.h; sourceTree = "<group>"; };
 		571244341DC1C82E009CBE66 /* PublishMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishMenuButton.m; sourceTree = "<group>"; };
 		571244351DC1C82E009CBE66 /* UIImage+XW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XW.h"; sourceTree = "<group>"; };
@@ -164,6 +184,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57075D351DC31B9000693E85 /* BBInputKit */ = {
+			isa = PBXGroup;
+			children = (
+				57075D361DC31B9000693E85 /* BBInput.h */,
+				57075D371DC31B9000693E85 /* BBInput.m */,
+				57075D381DC31B9000693E85 /* BBInputView.h */,
+				57075D391DC31B9000693E85 /* BBInputView.m */,
+				57075D3A1DC31B9000693E85 /* BBInputView.xib */,
+			);
+			path = BBInputKit;
+			sourceTree = "<group>";
+		};
+		57075DF61DC347D400693E85 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				57075DF71DC347D400693E85 /* TWSpringyFlowLayout.h */,
+				57075DF81DC347D400693E85 /* TWSpringyFlowLayout.m */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		5768C1CD1DB5B7CF0069B421 = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +422,9 @@
 		5768C21B1DB5B9050069B421 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				57075DF61DC347D400693E85 /* Layouts */,
+				57075DFA1DC3480200693E85 /* ZSMessageViewCell.h */,
+				57075DFB1DC3480200693E85 /* ZSMessageViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -412,6 +456,8 @@
 		5768C21E1DB5B9050069B421 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				57075D3E1DC3205F00693E85 /* MineInfModel.h */,
+				57075D3F1DC3205F00693E85 /* MineInfModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -426,6 +472,9 @@
 		5768C2201DB5B9050069B421 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				57075D351DC31B9000693E85 /* BBInputKit */,
+				57075D321DC31B4400693E85 /* UIViewController+SelectPhotoIcon.h */,
+				57075D331DC31B4400693E85 /* UIViewController+SelectPhotoIcon.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -676,6 +725,7 @@
 				5768C1E61DB5B7CF0069B421 /* Assets.xcassets in Resources */,
 				5768C1E41DB5B7CF0069B421 /* Main.storyboard in Resources */,
 				571ADD201DBF49590095D244 /* ZSHomeTableViewCell.xib in Resources */,
+				57075D3D1DC31B9000693E85 /* BBInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +798,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57075D401DC3205F00693E85 /* MineInfModel.m in Sources */,
 				5768C22C1DB5B9050069B421 /* AppDelegate.m in Sources */,
 				57D7E1FC1DB9E378005E69E2 /* ZSMessageView.m in Sources */,
 				5787E89F1DB8A9250062249F /* UIbutton.m in Sources */,
@@ -760,23 +811,28 @@
 				5768C23F1DB5BAFC0069B421 /* ZSOrderViewController.m in Sources */,
 				5768C2391DB5B9DE0069B421 /* ZSNavigationController.m in Sources */,
 				5768C22E1DB5B9050069B421 /* ViewController.m in Sources */,
+				57075D341DC31B4400693E85 /* UIViewController+SelectPhotoIcon.m in Sources */,
 				5768C2541DB5BD4C0069B421 /* ZSTabBar.m in Sources */,
 				5768C2421DB5BB1E0069B421 /* ZSEditAndReceiveViewController.m in Sources */,
 				5768C2511DB5BC600069B421 /* UIImage+Image.m in Sources */,
 				5771FDE51DBDE1B400003DCC /* XLWaveView.m in Sources */,
+				57075D3B1DC31B9000693E85 /* BBInput.m in Sources */,
 				5768C2481DB5BB390069B421 /* ZSMineViewController.m in Sources */,
 				5768C2361DB5B9AA0069B421 /* ZSTabBarController.m in Sources */,
 				571244371DC1C82E009CBE66 /* PublishMenuButton.m in Sources */,
 				5768C2451DB5BB2C0069B421 /* ZSMessageViewController.m in Sources */,
 				571244381DC1C82E009CBE66 /* UIImage+XW.m in Sources */,
+				57075D3C1DC31B9000693E85 /* BBInputView.m in Sources */,
 				5768C23C1DB5BAE50069B421 /* ZSHomeViewController.m in Sources */,
 				57599A651DB9A520007BC223 /* ZSRegisterCustomerVC.m in Sources */,
 				571ADD1F1DBF49590095D244 /* ZSHomeTableViewCell.m in Sources */,
 				5787E8961DB866E40062249F /* ZSLoginViewController.m in Sources */,
 				57599A661DB9A520007BC223 /* ZSRegisterViewController.m in Sources */,
 				578B71291DC0AB2C00453A18 /* ThreeViewController.m in Sources */,
+				57075DF91DC347D400693E85 /* TWSpringyFlowLayout.m in Sources */,
 				578B71211DC0AAC700453A18 /* XWPopMenuController.m in Sources */,
 				578B71281DC0AB2C00453A18 /* OneViewController.m in Sources */,
+				57075DFC1DC3480200693E85 /* ZSMessageViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
