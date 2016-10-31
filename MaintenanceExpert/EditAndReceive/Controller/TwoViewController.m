@@ -5,8 +5,11 @@
 //  Created by koka on 16/10/18.
 //  Copyright © 2016年 ZSYW. All rights reserved.
 //
-
+/*
+ 这是快捷下单页面
+ */
 #import "TwoViewController.h"
+
 
 @interface TwoViewController ()
 

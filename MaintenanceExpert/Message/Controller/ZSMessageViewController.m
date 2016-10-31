@@ -55,7 +55,7 @@
     
     cell.iconview.image = [UIImage imageNamed:@"account_highlight"];
     cell.iconview.layer.cornerRadius = 30;
-    cell.iD.text = @"涨涨涨";
+    cell.iD.text = @"老张";
     cell.news.text = @"你猜猜我是谁啊 | 5 分钟前";
     cell.image.image =[UIImage imageNamed:@"93S58PICcXy_1024"];
     

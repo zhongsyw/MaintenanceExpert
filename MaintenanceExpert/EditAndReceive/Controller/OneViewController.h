@@ -18,5 +18,6 @@ typedef void(^dismissBlock) ();
 //block声明方法
 -(void)toDissmissSelf:(dismissBlock)block;
 
+@property (nonatomic,copy)UITextField *Area;
 
 @end

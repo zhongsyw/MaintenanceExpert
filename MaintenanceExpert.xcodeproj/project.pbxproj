@@ -19,6 +19,8 @@
 		5712447E1DC1DE97009CBE66 /* ZSMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5712447D1DC1DE97009CBE66 /* ZSMineInfoViewController.m */; };
 		571ADD1F1DBF49590095D244 /* ZSHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 571ADD1D1DBF49590095D244 /* ZSHomeTableViewCell.m */; };
 		571ADD201DBF49590095D244 /* ZSHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571ADD1E1DBF49590095D244 /* ZSHomeTableViewCell.xib */; };
+		572F8A1B1DC7481E0076E2D8 /* ZSLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F8A181DC7481E0076E2D8 /* ZSLeftTableViewCell.m */; };
+		572F8A1C1DC7481E0076E2D8 /* ZSRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F8A1A1DC7481E0076E2D8 /* ZSRightTableViewCell.m */; };
 		57599A651DB9A520007BC223 /* ZSRegisterCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A621DB9A520007BC223 /* ZSRegisterCustomerVC.m */; };
 		57599A661DB9A520007BC223 /* ZSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57599A641DB9A520007BC223 /* ZSRegisterViewController.m */; };
 		5768C1E41DB5B7CF0069B421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5768C1E21DB5B7CF0069B421 /* Main.storyboard */; };
@@ -92,6 +94,10 @@
 		571ADD1C1DBF49590095D244 /* ZSHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSHomeTableViewCell.h; sourceTree = "<group>"; };
 		571ADD1D1DBF49590095D244 /* ZSHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSHomeTableViewCell.m; sourceTree = "<group>"; };
 		571ADD1E1DBF49590095D244 /* ZSHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSHomeTableViewCell.xib; sourceTree = "<group>"; };
+		572F8A171DC7481E0076E2D8 /* ZSLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSLeftTableViewCell.h; sourceTree = "<group>"; };
+		572F8A181DC7481E0076E2D8 /* ZSLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSLeftTableViewCell.m; sourceTree = "<group>"; };
+		572F8A191DC7481E0076E2D8 /* ZSRightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRightTableViewCell.h; sourceTree = "<group>"; };
+		572F8A1A1DC7481E0076E2D8 /* ZSRightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRightTableViewCell.m; sourceTree = "<group>"; };
 		57599A611DB9A520007BC223 /* ZSRegisterCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRegisterCustomerVC.h; sourceTree = "<group>"; };
 		57599A621DB9A520007BC223 /* ZSRegisterCustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRegisterCustomerVC.m; sourceTree = "<group>"; };
 		57599A631DB9A520007BC223 /* ZSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRegisterViewController.h; sourceTree = "<group>"; };
@@ -143,12 +149,12 @@
 		578B70B41DC0775600453A18 /* ZSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSSettingViewController.m; sourceTree = "<group>"; };
 		578B711D1DC0AAC700453A18 /* XWPopMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWPopMenuController.h; sourceTree = "<group>"; };
 		578B711E1DC0AAC700453A18 /* XWPopMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWPopMenuController.m; sourceTree = "<group>"; };
-		578B71221DC0AB2C00453A18 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
-		578B71231DC0AB2C00453A18 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
-		578B71241DC0AB2C00453A18 /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
-		578B71251DC0AB2C00453A18 /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
-		578B71261DC0AB2C00453A18 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
-		578B71271DC0AB2C00453A18 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		578B71221DC0AB2C00453A18 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneViewController.h; path = ../Controller/OneViewController.h; sourceTree = "<group>"; };
+		578B71231DC0AB2C00453A18 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneViewController.m; path = ../Controller/OneViewController.m; sourceTree = "<group>"; };
+		578B71241DC0AB2C00453A18 /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreeViewController.h; path = ../Controller/ThreeViewController.h; sourceTree = "<group>"; };
+		578B71251DC0AB2C00453A18 /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreeViewController.m; path = ../Controller/ThreeViewController.m; sourceTree = "<group>"; };
+		578B71261DC0AB2C00453A18 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwoViewController.h; path = ../Controller/TwoViewController.h; sourceTree = "<group>"; };
+		578B71271DC0AB2C00453A18 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwoViewController.m; path = ../Controller/TwoViewController.m; sourceTree = "<group>"; };
 		57D7E1E21DB9AACA005E69E2 /* ZSChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSChangePasswordVC.h; sourceTree = "<group>"; };
 		57D7E1E31DB9AACA005E69E2 /* ZSChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSChangePasswordVC.m; sourceTree = "<group>"; };
 		57D7E1FA1DB9E378005E69E2 /* ZSMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSMessageView.h; sourceTree = "<group>"; };
@@ -203,6 +209,20 @@
 				57075DF81DC347D400693E85 /* TWSpringyFlowLayout.m */,
 			);
 			path = Layouts;
+			sourceTree = "<group>";
+		};
+		572F89721DC71C660076E2D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		572F89731DC71C660076E2D8 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		5768C1CD1DB5B7CF0069B421 = {
@@ -516,6 +536,10 @@
 		5768C2251DB5B9050069B421 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				572F8A171DC7481E0076E2D8 /* ZSLeftTableViewCell.h */,
+				572F8A181DC7481E0076E2D8 /* ZSLeftTableViewCell.m */,
+				572F8A191DC7481E0076E2D8 /* ZSRightTableViewCell.h */,
+				572F8A1A1DC7481E0076E2D8 /* ZSRightTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -537,8 +561,8 @@
 			isa = PBXGroup;
 			children = (
 				5768C2301DB5B91F0069B421 /* Controller */,
-				5768C2311DB5B91F0069B421 /* Model */,
-				5768C2321DB5B91F0069B421 /* Tool */,
+				572F89721DC71C660076E2D8 /* Model */,
+				572F89731DC71C660076E2D8 /* Tool */,
 				5768C2331DB5B91F0069B421 /* View */,
 			);
 			path = EditAndReceive;
@@ -547,12 +571,6 @@
 		5768C2301DB5B91F0069B421 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				578B71221DC0AB2C00453A18 /* OneViewController.h */,
-				578B71231DC0AB2C00453A18 /* OneViewController.m */,
-				578B71241DC0AB2C00453A18 /* ThreeViewController.h */,
-				578B71251DC0AB2C00453A18 /* ThreeViewController.m */,
-				578B71261DC0AB2C00453A18 /* TwoViewController.h */,
-				578B71271DC0AB2C00453A18 /* TwoViewController.m */,
 				578B711D1DC0AAC700453A18 /* XWPopMenuController.h */,
 				578B711E1DC0AAC700453A18 /* XWPopMenuController.m */,
 				5768C2401DB5BB1E0069B421 /* ZSEditAndReceiveViewController.h */,
@@ -561,23 +579,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		5768C2311DB5B91F0069B421 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5768C2321DB5B91F0069B421 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
 		5768C2331DB5B91F0069B421 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				578B71221DC0AB2C00453A18 /* OneViewController.h */,
+				578B71231DC0AB2C00453A18 /* OneViewController.m */,
+				578B71241DC0AB2C00453A18 /* ThreeViewController.h */,
+				578B71251DC0AB2C00453A18 /* ThreeViewController.m */,
+				578B71261DC0AB2C00453A18 /* TwoViewController.h */,
+				578B71271DC0AB2C00453A18 /* TwoViewController.m */,
 				571244331DC1C82E009CBE66 /* PublishMenuButton.h */,
 				571244341DC1C82E009CBE66 /* PublishMenuButton.m */,
 				571244351DC1C82E009CBE66 /* UIImage+XW.h */,
@@ -809,6 +819,7 @@
 				578B712A1DC0AB2C00453A18 /* TwoViewController.m in Sources */,
 				578B70B51DC0775600453A18 /* ZSSettingViewController.m in Sources */,
 				5768C23F1DB5BAFC0069B421 /* ZSOrderViewController.m in Sources */,
+				572F8A1B1DC7481E0076E2D8 /* ZSLeftTableViewCell.m in Sources */,
 				5768C2391DB5B9DE0069B421 /* ZSNavigationController.m in Sources */,
 				5768C22E1DB5B9050069B421 /* ViewController.m in Sources */,
 				57075D341DC31B4400693E85 /* UIViewController+SelectPhotoIcon.m in Sources */,
@@ -822,6 +833,7 @@
 				571244371DC1C82E009CBE66 /* PublishMenuButton.m in Sources */,
 				5768C2451DB5BB2C0069B421 /* ZSMessageViewController.m in Sources */,
 				571244381DC1C82E009CBE66 /* UIImage+XW.m in Sources */,
+				572F8A1C1DC7481E0076E2D8 /* ZSRightTableViewCell.m in Sources */,
 				57075D3C1DC31B9000693E85 /* BBInputView.m in Sources */,
 				5768C23C1DB5BAE50069B421 /* ZSHomeViewController.m in Sources */,
 				57599A651DB9A520007BC223 /* ZSRegisterCustomerVC.m in Sources */,
