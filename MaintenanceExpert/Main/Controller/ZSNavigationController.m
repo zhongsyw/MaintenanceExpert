@@ -9,6 +9,7 @@
 #import "ZSNavigationController.h"
 #import "UIImage+Image.h"
 #import "ZSTabBarController.h"
+
 //黄色导航栏
 #define NavBarColor [UIColor colorWithRed:250/255.0 green:227/255.0 blue:111/255.0 alpha:1.0]
 
@@ -47,11 +48,7 @@
     
     self.view.backgroundColor = [UIColor blueColor];
     self.navigationBarHidden = YES;
-//    webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-//    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.chnyoufu.com/ups_Install.htm"]];
-//    [self.view addSubview: webView];
-//    [webView loadRequest:request];
-   
+ 
     
 }
 

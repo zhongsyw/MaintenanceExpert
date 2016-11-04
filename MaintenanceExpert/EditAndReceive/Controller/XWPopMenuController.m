@@ -88,7 +88,6 @@
     [super viewDidLoad];
     
 
-    
     //添加菜单按钮
     [self setMenu];
     //添加底部关闭按钮
@@ -106,7 +105,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    
+    self.navigationController.navigationBarHidden = YES;
     [UIView animateWithDuration:0.6 animations:^{
         
         _closeImgView.transform = CGAffineTransformRotate(_closeImgView.transform, M_PI);
@@ -269,7 +268,8 @@
                 _closeImgView.transform = CGAffineTransformRotate(_closeImgView.transform, -M_PI_2*1.5);
             }];
         }];
-        [self presentViewController:publishVC animated:YES completion:nil];
+        //[self presentViewController:publishVC animated:YES completion:nil];
+        [self.navigationController pushViewController:publishVC animated:YES];
     }else if(btn.tag == 1003){
         //图文
         OneViewController *publishVC = [[OneViewController alloc] init];
@@ -280,7 +280,8 @@
                 _closeImgView.transform = CGAffineTransformRotate(_closeImgView.transform, -M_PI_2*1.5);
             }];
         }];
-        [self presentViewController:publishVC animated:YES completion:nil];
+        //[self presentViewController:publishVC animated:YES completion:nil];
+        [self.navigationController pushViewController:publishVC animated:YES];
     }else {
         //待使用页面
         ThreeViewController *publishLinkVC = [[ThreeViewController alloc] init];
@@ -331,8 +332,8 @@
         
     } completion:^(BOOL finished) {
         
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }];
     
 }

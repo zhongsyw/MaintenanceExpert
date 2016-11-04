@@ -27,6 +27,7 @@
     ZSTabBarController *tabBarvc = [[ZSTabBarController alloc]init];
     
     ZSNavigationController *nav = [[ZSNavigationController alloc]initWithRootViewController:tabBarvc];
+    
     self.window.rootViewController = nav;
     
     

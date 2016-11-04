@@ -119,16 +119,16 @@
 #pragma mark - ------------------------------------------------------------------
 #pragma mark - ZSTabBarDelegate
 - (void)tabBarPlusBtnClick:(ZSTabBar *)tabBar {
-//    NSLog(@"123");
+
     XWPopMenuController *vc = [[XWPopMenuController alloc]init];
-    
+    [self.tabBarController addChildViewController:vc];
     //虚化背景
     UIImage *image = [UIImage imageWithCaputureView:self.view];
     
     vc.backImg = image;
     
-    [self presentViewController:vc animated:NO completion:nil];
-    
+   
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

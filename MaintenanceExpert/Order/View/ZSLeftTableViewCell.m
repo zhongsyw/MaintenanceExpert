@@ -2,7 +2,7 @@
 //  ZSLeftTableViewCell.m
 //  MaintenanceExpert
 //
-//  Created by 中数 on 16/10/31.
+//  Created by xpc on 16/10/31.
 //  Copyright © 2016年 ZSYW. All rights reserved.
 //
 
@@ -143,6 +143,7 @@
     _relation = [[UIButton alloc] init];
     _relation.backgroundColor = [UIColor cyanColor];
     [_relation setBackgroundImage:[UIImage imageNamed:@"lianxi"] forState:UIControlStateNormal];
+    [_relation addTarget:self action:@selector(relationButtonClick) forControlEvents:UIControlEventTouchDown];
     [_bgView addSubview:_relation];
     _relation.sd_layout.leftEqualToView(_imgType)
     .topSpaceToView(line, 15)
@@ -155,6 +156,7 @@
     [_another setTitle:@"● ● ●" forState:UIControlStateNormal];
     [_another setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_another.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [_another addTarget:self action:@selector(anotherButtonClick) forControlEvents:UIControlEventTouchDown];
     [_bgView addSubview:_another];
     _another.sd_layout.rightSpaceToView(_bgView, 10)
     .topSpaceToView(line, 10)
@@ -168,6 +170,7 @@
     [_appraisal setTitle:@"查看评价" forState:UIControlStateNormal];
     [_appraisal setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_appraisal.titleLabel setFont:[UIFont systemFontOfSize:16]];
+    [_appraisal addTarget:self action:@selector(appraisalButtonClick) forControlEvents:UIControlEventTouchDown];
     [_bgView addSubview:_appraisal];
     _appraisal.sd_layout.rightSpaceToView(_another, 10)
     .topEqualToView(_another)
@@ -188,6 +191,23 @@
     return BGVIEW_HEIGHT;
 }
 
+
+//  联系客户 按钮
+- (void)relationButtonClick {
+    
+    NSLog(@"联系客户");
+}
+
+//  查看评价 按钮
+- (void)appraisalButtonClick {
+    NSLog(@"查看评价");
+}
+
+//  更多 按钮
+- (void)anotherButtonClick {
+    
+    NSLog(@"更多");
+}
 
 
 

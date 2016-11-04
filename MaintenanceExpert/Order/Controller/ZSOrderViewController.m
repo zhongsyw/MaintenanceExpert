@@ -2,7 +2,7 @@
 //  ZSOrderViewController.m
 //  MaintenanceExpert
 //
-//  Created by 中数 on 16/10/27.
+//  Created by xpc on 16/10/27.
 //  Copyright © 2016年 ZSYW. All rights reserved.
 //
 
@@ -32,8 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
-
+    self.view.backgroundColor = BACK_GROUND_COLOR;
+    
     self.navigationController.navigationBarHidden = NO;
     [self creatTableView];
     [self creatTopBtn];
@@ -53,7 +53,7 @@
     _leftTableView.dataSource = self;
     _leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //  设置分割线
     [self.view addSubview:_leftTableView];
-   
+    
     //  --------------
     _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, TOP_BUTTON_HEIGHT, KScreenWidth, KScreenHeight - 162) style:UITableViewStylePlain];
     _rightTableView.backgroundColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
@@ -74,7 +74,7 @@
     topLeftBtn.frame = CGRectMake(0, 0, KScreenWidth / 2, TOP_BUTTON_HEIGHT);
     [topLeftBtn setTitle:@"正在进行的订单" forState:UIControlStateNormal];
     [topLeftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [topLeftBtn setBackgroundImage:[UIImage imageNamed:@"selectBtn"] forState:UIControlStateNormal];
+    //    [topLeftBtn setBackgroundImage:[UIImage imageNamed:@"selectBtn"] forState:UIControlStateNormal];
     [topLeftBtn setBackgroundColor:[UIColor cyanColor]];
     topLeftBtn.tag = 90;
     [topLeftBtn addTarget:self action:@selector(topLeftBtnClick:) forControlEvents:UIControlEventTouchDown];
@@ -85,7 +85,7 @@
     topRightBtn.frame = CGRectMake(KScreenWidth / 2, 0, KScreenWidth / 2, TOP_BUTTON_HEIGHT);
     [topRightBtn setTitle:@"已经完成的订单" forState:UIControlStateNormal];
     [topRightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [topRightBtn setBackgroundImage:[UIImage imageNamed:@"nomalBtn"] forState:UIControlStateNormal];
+    //    [topRightBtn setBackgroundImage:[UIImage imageNamed:@"nomalBtn"] forState:UIControlStateNormal];
     [topRightBtn setBackgroundColor:[UIColor purpleColor]];
     topRightBtn.tag = 91;
     [topRightBtn addTarget:self action:@selector(topRightBtnClick:) forControlEvents:UIControlEventTouchDown];
@@ -98,13 +98,13 @@
     
     NSLog(@"leftBtn,%ld",button.tag);
     
-//    button.selected = !button.selected;
+    //    button.selected = !button.selected;
     
     _leftTableView.hidden = NO;
     _rightTableView.hidden = YES;
     
     if (_leftTableView.hidden == NO) {
-    
+        
         [topLeftBtn setBackgroundColor:[UIColor cyanColor]];
         [topRightBtn setBackgroundColor:[UIColor purpleColor]];
     }
@@ -115,13 +115,13 @@
     
     NSLog(@"rightBtn,%ld",button.tag);
     
-//    button.selected = !button.selected;
+    //    button.selected = !button.selected;
     
     _rightTableView.hidden = NO;
     _leftTableView.hidden = YES;
-
-    if (_rightTableView.hidden == NO) {
     
+    if (_rightTableView.hidden == NO) {
+        
         [topLeftBtn setBackgroundColor:[UIColor purpleColor]];
         [topRightBtn setBackgroundColor:[UIColor cyanColor]];
     }
@@ -136,21 +136,21 @@
 }
 
 /*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    //static NSString *identifier = @"cell";
-    
-    ZSOneTableViewCell *cell = [[ZSOneTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    return cell;
-}
-*/
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+ //static NSString *identifier = @"cell";
+ 
+ ZSOneTableViewCell *cell = [[ZSOneTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+ cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+ 
+ return cell;
+ }
+ */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (tableView.tag == 100) {
-    
+        
         static NSString *leftIdentifier = @"cell";
         ZSLeftTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:leftIdentifier];
         
@@ -159,15 +159,15 @@
         }
         return cell;
         
-   }else if (tableView == _rightTableView) {
+    }else if (tableView == _rightTableView) {
         
         static NSString *rightIndentifier = @"ZSRightTableViewCell";
         ZSRightTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:rightIndentifier];
-       
+        
         if(nil == cell) {
             cell = [[ZSRightTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rightIndentifier];
         }
-       return cell;
+        return cell;
     }
     return nil;
 }
@@ -192,13 +192,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
