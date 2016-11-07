@@ -13,6 +13,7 @@
 #import "TieZiLookImageController.h"
 #import "TwoCollectionViewCell.h"
 #import "TwoCategoryViewController.h"
+#import "TworDetailsViewController.h"
 
 #define HEADERIMG_HEIGHT 50
 @interface TwoViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITextViewDelegate,UITextFieldDelegate, LGPhotoPickerViewControllerDelegate, LGPhotoPickerBrowserViewControllerDataSource, LGPhotoPickerBrowserViewControllerDelegate, TieZiLookImageControllerDelegate,shanchudelgate>
@@ -44,6 +45,10 @@
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:BACK_GROUND_COLOR];
     
+    self.navigationController.navigationBarHidden = NO;
+    
+    self.title = @"发 布";
+    
     [self creatBakeWhiteColor];
     
     [self creatUpView];
@@ -73,7 +78,7 @@
     upView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:upView];
     upView.sd_layout.leftSpaceToView(self.view, 0)
-    .topSpaceToView(self.view, HEADERIMG_HEIGHT + 20)
+    .topSpaceToView(self.view, 0)
     .rightSpaceToView(self.view, 0)
     .heightIs(self.view.frame.size.height/2 - 20);
     
@@ -98,25 +103,25 @@
 //  Navigation、标题、描述
 - (void)creatUpView {
     
-    //  Navigation 发 布
-    headerImg = [[UIImageView alloc] init];
-    headerImg.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:217.0/255.0 blue:85.0/255.0 alpha:1];
-    [self.view addSubview:headerImg];
-    headerImg.sd_layout.leftSpaceToView(self.view, 0)
-    .topSpaceToView(self.view, 20)
-    .rightSpaceToView(self.view, 0)
-    .heightIs(HEADERIMG_HEIGHT);
-    
-    UILabel *titleLable = [[UILabel alloc] init];
-//    titleLable.backgroundColor = [UIColor purpleColor];
-    titleLable.text = @"发 布";
-    [titleLable setFont:[UIFont systemFontOfSize:18]];
-    titleLable.textAlignment = NSTextAlignmentCenter;
-    [headerImg addSubview:titleLable];
-    titleLable.sd_layout.leftSpaceToView(headerImg, self.view.frame.size.width / 2 - 30)
-    .topSpaceToView(headerImg, 5)
-    .bottomSpaceToView(headerImg, 5)
-    .widthIs(60);
+//    //  Navigation 发 布
+//    headerImg = [[UIImageView alloc] init];
+//    headerImg.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:217.0/255.0 blue:85.0/255.0 alpha:1];
+//    [self.view addSubview:headerImg];
+//    headerImg.sd_layout.leftSpaceToView(self.view, 0)
+//    .topSpaceToView(self.view, 20)
+//    .rightSpaceToView(self.view, 0)
+//    .heightIs(HEADERIMG_HEIGHT);
+//    
+//    UILabel *titleLable = [[UILabel alloc] init];
+////    titleLable.backgroundColor = [UIColor purpleColor];
+//    titleLable.text = @"发 布";
+//    [titleLable setFont:[UIFont systemFontOfSize:18]];
+//    titleLable.textAlignment = NSTextAlignmentCenter;
+//    [headerImg addSubview:titleLable];
+//    titleLable.sd_layout.leftSpaceToView(headerImg, self.view.frame.size.width / 2 - 30)
+//    .topSpaceToView(headerImg, 5)
+//    .bottomSpaceToView(headerImg, 5)
+//    .widthIs(60);
     
     
     //  标题
@@ -353,7 +358,7 @@
     confirmatBtn = [[UIButton alloc] init];
     confirmatBtn.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:217.0/255.0 blue:85.0/255.0 alpha:1];
     [confirmatBtn setTitle:@"确定发布" forState:UIControlStateNormal];
-    [confirmatBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
+    [confirmatBtn.titleLabel setFont:[UIFont systemFontOfSize:17]];
     [confirmatBtn addTarget:self action:@selector(confirmatButtonClick) forControlEvents:UIControlEventTouchDown];
     [downView addSubview:confirmatBtn];
     confirmatBtn.sd_layout.leftSpaceToView(downView, 12)
@@ -423,7 +428,14 @@
 #pragma mark - 确定下单按钮
 - (void)confirmatButtonClick {
     
-    NSLog(@"确定发布");
+    NSLog(@"确定发布----");
+    
+    TworDetailsViewController *detailsVC = [[TworDetailsViewController alloc] init];
+    
+//    [self presentViewController:detailsVC animated:YES completion:nil];
+    
+    [self.navigationController pushViewController:detailsVC animated:YES];
+    
 }
 
 #pragma mark - 键盘响应

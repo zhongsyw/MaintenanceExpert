@@ -256,7 +256,8 @@
                 _closeImgView.transform = CGAffineTransformRotate(_closeImgView.transform, -M_PI_2*1.5);
             }];
         }];
-        [self presentViewController:publishTextVC animated:YES completion:nil];
+        //[self presentViewController:publishTextVC animated:YES completion:nil];
+        [self.navigationController pushViewController:publishTextVC animated:YES];
 
     }else if(btn.tag == 1001){
         //图文

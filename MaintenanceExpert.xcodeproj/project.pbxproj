@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300061D71DD023F6000D1BD5 /* TworDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 300061D61DD023F6000D1BD5 /* TworDetailsViewController.m */; };
+		30D39C951DCC5FBF002B4801 /* ZSHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D39C941DCC5FBF002B4801 /* ZSHomeTableViewCell.m */; };
 		30E3169D1DCB36D200B6ADA4 /* ZSLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E3169A1DCB36D200B6ADA4 /* ZSLeftTableViewCell.m */; };
 		30E3169E1DCB36D200B6ADA4 /* ZSRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E3169C1DCB36D200B6ADA4 /* ZSRightTableViewCell.m */; };
 		30E316A41DCB37F800B6ADA4 /* HXTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E316A11DCB37F800B6ADA4 /* HXTagsView.m */; };
@@ -55,8 +57,6 @@
 		571244371DC1C82E009CBE66 /* PublishMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 571244341DC1C82E009CBE66 /* PublishMenuButton.m */; };
 		571244381DC1C82E009CBE66 /* UIImage+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 571244361DC1C82E009CBE66 /* UIImage+XW.m */; };
 		5712447E1DC1DE97009CBE66 /* ZSMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5712447D1DC1DE97009CBE66 /* ZSMineInfoViewController.m */; };
-		571ADD1F1DBF49590095D244 /* ZSHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 571ADD1D1DBF49590095D244 /* ZSHomeTableViewCell.m */; };
-		571ADD201DBF49590095D244 /* ZSHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571ADD1E1DBF49590095D244 /* ZSHomeTableViewCell.xib */; };
 		572F8A131DC727E60076E2D8 /* STConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F8A091DC727E50076E2D8 /* STConst.m */; };
 		572F8A141DC727E60076E2D8 /* STUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F8A0B1DC727E50076E2D8 /* STUI.m */; };
 		572F8A161DC727E60076E2D8 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F8A101DC727E60076E2D8 /* STPickerView.m */; };
@@ -117,6 +117,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300061D51DD023F6000D1BD5 /* TworDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TworDetailsViewController.h; sourceTree = "<group>"; };
+		300061D61DD023F6000D1BD5 /* TworDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TworDetailsViewController.m; sourceTree = "<group>"; };
+		30D39C931DCC5FBF002B4801 /* ZSHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSHomeTableViewCell.h; sourceTree = "<group>"; };
+		30D39C941DCC5FBF002B4801 /* ZSHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSHomeTableViewCell.m; sourceTree = "<group>"; };
 		30E316991DCB36D200B6ADA4 /* ZSLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSLeftTableViewCell.h; sourceTree = "<group>"; };
 		30E3169A1DCB36D200B6ADA4 /* ZSLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSLeftTableViewCell.m; sourceTree = "<group>"; };
 		30E3169B1DCB36D200B6ADA4 /* ZSRightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRightTableViewCell.h; sourceTree = "<group>"; };
@@ -214,9 +218,6 @@
 		571244361DC1C82E009CBE66 /* UIImage+XW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XW.m"; sourceTree = "<group>"; };
 		5712447C1DC1DE97009CBE66 /* ZSMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSMineInfoViewController.h; sourceTree = "<group>"; };
 		5712447D1DC1DE97009CBE66 /* ZSMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSMineInfoViewController.m; sourceTree = "<group>"; };
-		571ADD1C1DBF49590095D244 /* ZSHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSHomeTableViewCell.h; sourceTree = "<group>"; };
-		571ADD1D1DBF49590095D244 /* ZSHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSHomeTableViewCell.m; sourceTree = "<group>"; };
-		571ADD1E1DBF49590095D244 /* ZSHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSHomeTableViewCell.xib; sourceTree = "<group>"; };
 		572F8A071DC727E50076E2D8 /* STConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConfig.h; sourceTree = "<group>"; };
 		572F8A081DC727E50076E2D8 /* STConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConst.h; sourceTree = "<group>"; };
 		572F8A091DC727E50076E2D8 /* STConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConst.m; sourceTree = "<group>"; };
@@ -681,8 +682,8 @@
 			children = (
 				5768C20D1DB5B9050069B421 /* Controller */,
 				5768C20E1DB5B9050069B421 /* Model */,
-				5768C20F1DB5B9050069B421 /* Tool */,
 				5768C2101DB5B9050069B421 /* View */,
+				5768C20F1DB5B9050069B421 /* Tool */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -713,9 +714,8 @@
 		5768C2101DB5B9050069B421 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				571ADD1C1DBF49590095D244 /* ZSHomeTableViewCell.h */,
-				571ADD1D1DBF49590095D244 /* ZSHomeTableViewCell.m */,
-				571ADD1E1DBF49590095D244 /* ZSHomeTableViewCell.xib */,
+				30D39C931DCC5FBF002B4801 /* ZSHomeTableViewCell.h */,
+				30D39C941DCC5FBF002B4801 /* ZSHomeTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -954,6 +954,8 @@
 				578B71231DC0AB2C00453A18 /* OneViewController.m */,
 				30E316AC1DCB386300B6ADA4 /* TwoViewController.h */,
 				30E316AD1DCB386300B6ADA4 /* TwoViewController.m */,
+				300061D51DD023F6000D1BD5 /* TworDetailsViewController.h */,
+				300061D61DD023F6000D1BD5 /* TworDetailsViewController.m */,
 				30E316A61DCB384F00B6ADA4 /* TwoCategoryViewController.h */,
 				30E316A71DCB384F00B6ADA4 /* TwoCategoryViewController.m */,
 				578B71241DC0AB2C00453A18 /* ThreeViewController.h */,
@@ -1123,7 +1125,6 @@
 				5768C1E91DB5B7CF0069B421 /* LaunchScreen.storyboard in Resources */,
 				5768C1E61DB5B7CF0069B421 /* Assets.xcassets in Resources */,
 				5768C1E41DB5B7CF0069B421 /* Main.storyboard in Resources */,
-				571ADD201DBF49590095D244 /* ZSHomeTableViewCell.xib in Resources */,
 				57075D3D1DC31B9000693E85 /* BBInputView.xib in Resources */,
 				5753F04A1DC824A6001D95D6 /* area.plist in Resources */,
 			);
@@ -1219,6 +1220,7 @@
 				30E316B11DCB389500B6ADA4 /* TwoCollectionViewCell.m in Sources */,
 				571069201DCB055E005481B4 /* Stepthird.m in Sources */,
 				5768C2391DB5B9DE0069B421 /* ZSNavigationController.m in Sources */,
+				300061D71DD023F6000D1BD5 /* TworDetailsViewController.m in Sources */,
 				5768C22E1DB5B9050069B421 /* ViewController.m in Sources */,
 				57075D341DC31B4400693E85 /* UIViewController+SelectPhotoIcon.m in Sources */,
 				30E316AE1DCB386300B6ADA4 /* TwoViewController.m in Sources */,
@@ -1238,6 +1240,7 @@
 				30E3170B1DCB38F000B6ADA4 /* LGPhotoPickerImageView.m in Sources */,
 				572F8A131DC727E60076E2D8 /* STConst.m in Sources */,
 				30E316FC1DCB38F000B6ADA4 /* LGImagePickerSelectView.m in Sources */,
+				30D39C951DCC5FBF002B4801 /* ZSHomeTableViewCell.m in Sources */,
 				5768C2481DB5BB390069B421 /* ZSMineViewController.m in Sources */,
 				576CBA741DCAC48300514182 /* myimgeview.m in Sources */,
 				5768C2361DB5B9AA0069B421 /* ZSTabBarController.m in Sources */,
@@ -1257,7 +1260,6 @@
 				5753F0521DC824E7001D95D6 /* STPickerDate.m in Sources */,
 				57599A651DB9A520007BC223 /* ZSRegisterCustomerVC.m in Sources */,
 				30E3169D1DCB36D200B6ADA4 /* ZSLeftTableViewCell.m in Sources */,
-				571ADD1F1DBF49590095D244 /* ZSHomeTableViewCell.m in Sources */,
 				5787E8961DB866E40062249F /* ZSLoginViewController.m in Sources */,
 				57599A661DB9A520007BC223 /* ZSRegisterViewController.m in Sources */,
 				30E316FD1DCB38F000B6ADA4 /* LGPhotoPickerBrowserPhotoImageView.m in Sources */,
@@ -1421,7 +1423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/koka/Desktop/MaintenanceExpert/MaintenanceExpert/Main/Controller/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/zsyw/Desktop/MaintenanceExpert/MaintenanceExpert/Main/Controller/PrefixHeader.pch;
 				INFOPLIST_FILE = MaintenanceExpert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1436,7 +1438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/koka/Desktop/MaintenanceExpert/MaintenanceExpert/Main/Controller/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/zsyw/Desktop/MaintenanceExpert/MaintenanceExpert/Main/Controller/PrefixHeader.pch;
 				INFOPLIST_FILE = MaintenanceExpert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
