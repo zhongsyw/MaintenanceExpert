@@ -7,10 +7,18 @@
 //
 
 #import "ZSHomeViewController.h"
-#import "ZSHomeTableViewCell.h"
 #import "SDCycleScrollView.h"
+#import "ZSHomeTableViewCell.h"
+
 
 @interface ZSHomeViewController ()<UITableViewDelegate, UITableViewDataSource,SDCycleScrollViewDelegate>
+
+{
+    UIButton *leftTitleBtn;
+    UIButton *rightTitltBtn;
+    UIBarButtonItem *rightBarBtn;
+}
+
 
 @property (strong, nonatomic) UITableView *tableView;
 
@@ -21,33 +29,76 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-/*  显示 NavigationBar
- - (void)viewWillDisappear:(BOOL)animated
- {
- [super viewWillDisappear:animated];
- if ( self.navigationController.childViewControllers.count > 1 ) {
- [self.navigationController setNavigationBarHidden:NO animated:YES];
- }
- }
- */
+//  二级页面 显示 NavigationBar
+//- (void)viewWillDisappear:(BOOL)animated {
+//    
+//    [super viewWillDisappear:animated];
+//    
+//    if ( self.navigationController.childViewControllers.count > 1 ) {
+//        [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    }
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //    self.navigationController.navigationBarHidden = NO;
     
+    [self creatNavigationView];
     [self creatTableView];
-    [self creatHeadView];
+    [self creatTabelViewHeader];
 }
 
-- (void)creatHeadView {
+
+#warning 这里 差两个 图片没添加
+//  发现、我的、 搜索按钮
+- (void)creatNavigationView {
     
-//    NSArray *imageNames = @[@"h1.jpg",
-//                            @"h2.jpg",
-//                            @"h3.jpg",
-//                            @"h4.jpg" // 本地图片请填写全名
-//                            ];
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth/3, 44)];
+//    titleView.backgroundColor = [UIColor cyanColor];
+    
+//  发现
+    leftTitleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, titleView.frame.size.width/2, 44)];
+//    leftTitleBtn.backgroundColor = [UIColor redColor];
+    [leftTitleBtn setTitle:@"发现" forState:UIControlStateNormal];
+    leftTitleBtn.titleLabel.textAlignment = NSTextAlignmentLeft;
+    [leftTitleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [leftTitleBtn addTarget:self action:@selector(leftTitleBtnClick) forControlEvents:UIControlEventTouchDown];
+    [titleView addSubview:leftTitleBtn];
+    
+//  我的
+    rightTitltBtn = [[UIButton alloc] initWithFrame:CGRectMake(titleView.frame.size.width/2, 0, titleView.frame.size.width/2, 44)];
+//    rightTitltBtn.backgroundColor = [UIColor yellowColor];
+    [rightTitltBtn setTitle:@"我的" forState:UIControlStateNormal];
+    [rightTitltBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    rightTitltBtn.titleLabel.textAlignment = NSTextAlignmentRight;
+    [rightTitltBtn addTarget:self action:@selector(rightTitltBtnClick) forControlEvents:UIControlEventTouchDown];
+    [titleView addSubview:rightTitltBtn];
+
+    self.navigationItem.titleView = titleView;
+    
+    
+//  搜索
+    rightBarBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SearchIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(searchButtonClick)];
+    self.navigationItem.rightBarButtonItem = rightBarBtn;
+    
+}
+
+
+- (void)creatTableView {
+    
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - 64) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.bounces = NO;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //  设置分割线
+    [self.view addSubview:_tableView];
+}
+
+//  轮播图
+- (void)creatTabelViewHeader {
     
     NSArray *imagesURLStrings = @[
                                   @"http://img2.3lian.com/2014/c7/12/d/77.jpg",
@@ -55,71 +106,148 @@
                                   @"http://img3.iqilu.com/data/attachment/forum/201308/21/192654ai88zf6zaa60zddo.jpg"
                                   ];
     
-    NSArray *titles = @[@"中数运维中数运维",
-                        @"中数运维中数运维",
-                        @"中数运维中数运维",
-                        @"中数运维中数运维"
-                        ];
+    SDCycleScrollView *headSV = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight*0.209) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
-    _imgCount = 5;
-    
-    //  本地图片
-    //    SDCycleScrollView *headSV = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, 180) shouldInfiniteLoop:YES imageNamesGroup:imageNames];
-    //    headSV.delegate = self;
-    //    headSV.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
-    //    headSV.scrollDirection = UICollectionViewScrollDirectionVertical;
-    //    headSV.titlesGroup = titles;
-    ////    headSV.placeholderImage = [UIImage imageNamed:@"placeholder"];
-    //    headSV.backgroundColor = [UIColor purpleColor];
-    
-    SDCycleScrollView *headSV = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, KScreenWidth, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    
-    headSV.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
-    headSV.titlesGroup = titles;
+    headSV.currentPageDotImage = [UIImage imageNamed:@"pageControlCurrentDot"];
+    headSV.pageDotImage = [UIImage imageNamed:@"pageControlDot"];
     headSV.imageURLStringsGroup = imagesURLStrings;
-    headSV.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
     _tableView.tableHeaderView = headSV;
-    //         --- 模拟加载延迟
-    //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    //
-    //    });
     
 }
 
-- (void)creatTableView {
+
+- (void)leftTitleBtnClick {
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    [self.view addSubview:_tableView];
+    NSLog(@"发   现----");
+}
+
+- (void)rightTitltBtnClick {
+    
+    NSLog(@"我   的----");
+}
+
+- (void)searchButtonClick {
+    
+    NSLog(@"搜   索----");
+}
+
+
+//  刷新 当前位置
+- (void)refreshButtonClick {
+    
+    NSLog(@"刷新当前位置------");
+}
+
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    NSLog(@"cell 被点击");
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row == 0) {
+        
+        return 30;
+    }else if (indexPath.row == 1) {
+        
+        return KScreenHeight * 0.3;
+    }
+    
+    return KScreenHeight * 0.09;
 }
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 12;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIndentifier = @"ZSHomeTableViewCell";
-    ZSHomeTableViewCell *cell = (ZSHomeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIndentifier];
-    if(nil == cell) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIndentifier owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *identifier = @"HomeTableVieCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (!cell) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        if (indexPath.row == 0) {
+            
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 150, 30)];
+            label.text = @"附近的信息";
+            [label setFont:[UIFont systemFontOfSize:15]];
+            [cell addSubview:label];
+
+            
+//  刷新当前位置
+            
+            UIButton *refreshBtn = [[UIButton alloc] initWithFrame:CGRectMake(KScreenWidth - 40, 0, 30, 30)];
+            [refreshBtn setImage:[UIImage imageNamed:@"home_header_refresh"] forState:UIControlStateNormal];
+            [refreshBtn addTarget:self action:@selector(refreshButtonClick) forControlEvents:UIControlEventTouchDown];
+            [cell addSubview:refreshBtn];
+            
+            
+//  当前位置
+            
+            UILabel *nowAddress = [[UILabel alloc] initWithFrame:CGRectMake(KScreenWidth / 2 - 40, 0, KScreenWidth / 2, 30)];
+            nowAddress.text = @"敦化路160号华仁丶欧典商苑";
+            nowAddress.textColor = [UIColor grayColor];
+            [nowAddress setFont:[UIFont systemFontOfSize:12]];
+            nowAddress.textAlignment = NSTextAlignmentRight;
+            [cell addSubview:nowAddress];
+            
+            
+        }else if (indexPath.row == 1) {
+            
+  
+#warning 地图  待添加！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+            
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 200, 80)];
+            label.text = @"这里是地图IndexPath.Row=1";
+            label.textAlignment = NSTextAlignmentCenter;
+            [cell addSubview:label];
+            
+            
+
+            
+        }else if (indexPath.row == 2 || indexPath.row == 3){
+            
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 100, KScreenHeight * 0.09)];
+            label.text = @"这里是其余的Cell";
+            label.textAlignment = NSTextAlignmentCenter;
+
+            [cell addSubview:label];
+
+            
+        }else if (indexPath.row == 4){
+            
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight * 0.044)];
+            label.text = @"更多";
+            label.textAlignment = NSTextAlignmentCenter;
+            [cell addSubview:label];
+            
+        }
     }
     
-    _tableView.rowHeight = cell.frame.size.height;
     return cell;
 }
+
 
 #pragma mark - SDCycleScrollViewDelegate
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    
     NSLog(@"---点击了第%ld张图片", (long)index);
     
-    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
+//    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
 }
 
 
